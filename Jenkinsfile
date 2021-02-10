@@ -19,12 +19,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'xcodebuild -workspace Example/Gini.xcworkspace -scheme "Example" -destination \'platform=iOS Simulator,name=iPhone 11\''
+        sh 'xcodebuild -workspace Example/GiniPayApiLib.xcworkspace -scheme "Example" -destination \'platform=iOS Simulator,name=iPhone 11\''
       }
     }
     stage('Unit tests') {
       steps {
-        sh 'xcodebuild test -workspace Example/Gini.xcworkspace -scheme "Gini-Unit-Tests" -destination \'platform=iOS Simulator,name=iPhone 11\''
+        sh 'xcodebuild test -workspace Example/GiniPayApiLib.xcworkspace -scheme "GiniPayApiLib-Unit-Tests" -destination \'platform=iOS Simulator,name=iPhone 11\''
       }
     }
     stage('Documentation') {
@@ -48,7 +48,7 @@ pipeline {
         }
       }
       steps {
-        sh '/usr/local/bin/pod repo push gini-specs Gini.podspec --sources=https://github.com/gini/gini-podspecs.git,https://github.com/CocoaPods/Specs.git --allow-warnings'
+        sh '/usr/local/bin/pod repo push gini-specs GiniPayApiLib.podspec --sources=https://github.com/gini/gini-podspecs.git,https://github.com/CocoaPods/Specs.git --allow-warnings'
       }
     }
   }

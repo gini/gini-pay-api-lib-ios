@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Gini
+import GiniPayApiLib
 
 class ViewController: UIViewController {
 

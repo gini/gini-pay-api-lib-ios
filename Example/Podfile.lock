@@ -1,31 +1,31 @@
 PODS:
-  - Gini (1.0.0):
-    - Gini/DocumentsAPI (= 1.0.0)
-  - Gini/DocumentsAPI (1.0.0)
-  - Gini/Pinning (1.0.0):
-    - Gini/DocumentsAPI
+  - GiniPayApiLib (1.0.0):
+    - GiniPayApiLib/DocumentsAPI (= 1.0.0)
+  - GiniPayApiLib/DocumentsAPI (1.0.0)
+  - GiniPayApiLib/Pinning (1.0.0):
+    - GiniPayApiLib/DocumentsAPI
     - TrustKit (~> 1.6)
-  - Gini/Tests (1.0.0)
+  - GiniPayApiLib/Tests (1.0.0)
   - TrustKit (1.6.5)
 
 DEPENDENCIES:
-  - Gini (from `../`)
-  - Gini/DocumentsAPI (from `../`)
-  - Gini/Pinning (from `../`)
-  - Gini/Tests (from `../`)
+  - GiniPayApiLib (from `../`)
+  - GiniPayApiLib/DocumentsAPI (from `../`)
+  - GiniPayApiLib/Pinning (from `../`)
+  - GiniPayApiLib/Tests (from `../`)
 
 SPEC REPOS:
   trunk:
     - TrustKit
 
 EXTERNAL SOURCES:
-  Gini:
+  GiniPayApiLib:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Gini: e38dff85495849f325560b674f2a39498d4f9843
+  GiniPayApiLib: f9bd47f008000c30aa771993a1b6fa6d68b879f8
   TrustKit: 073855e3adecd317417bda4ac9e9ac54a2e3b9f2
 
-PODFILE CHECKSUM: 9142371538be20471536f26b1322049c5c03bde0
+PODFILE CHECKSUM: 2911890865d145ef4607b4a7756426497dc2ea98
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
