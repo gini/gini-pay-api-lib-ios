@@ -32,7 +32,7 @@
              "AccountingDocumentService",
              "CancellationToken",
              "DefaultDocumentService",
-             "GiniApiLib"
+             "GiniPayApiLib"
          ]
       },
       {
