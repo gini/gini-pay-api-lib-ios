@@ -1,5 +1,5 @@
 //
-//  GiniApiLib.swift
+//  GiniPayApiLib.swift
 //  GiniPayApiLib
 //
 //  Created by Enrique del Pozo Gómez on 4/3/19.
@@ -10,8 +10,8 @@ import Foundation
 import TrustKit
 #endif
 
-/// The Gini Api Library
-public final class GiniApiLib {
+/// The Gini Pay Api Library
+public final class GiniPayApiLib {
     
     private let docService: DocumentService!
     static var logLevel: LogLevel = .none
@@ -21,13 +21,13 @@ public final class GiniApiLib {
     }
     
     /**
-     * The instance of a `DocumentService` that is used by the Gini Api Library. The `DocumentService` allows the interaction with
+     * The instance of a `DocumentService` that is used by the Gini Pay Api Library. The `DocumentService` allows the interaction with
      * the Gini API.
      */
     public func documentService<T: DocumentService>() -> T {
         guard docService is T else {
             preconditionFailure("In order to use a \(T.self), you have to specify its corresponding api " +
-                "domain when building the GiniApiLib")
+                "domain when building the GiniPayApiLib")
         }
         //swiftlint:disable force_cast
         return docService as! T
@@ -44,8 +44,8 @@ public final class GiniApiLib {
 
 // MARK: - Builder
 
-extension GiniApiLib {
-    /// Builds a Gini Api Library
+extension GiniPayApiLib {
+    /// Builds a Gini Pay Api Library
     public struct Builder {
         var client: Client
         var api: APIDomain = .default
@@ -53,7 +53,7 @@ extension GiniApiLib {
         var logLevel: LogLevel
         
         /**
-         *  Creates a Gini Api Library
+         *  Creates a Gini Pay Api Library
          *
          * - Parameter client:            The Gini API client credentials
          * - Parameter api:               The Gini API that the library interacts with. `APIDomain.default` by default
@@ -70,24 +70,24 @@ extension GiniApiLib {
             self.logLevel = logLevel
         }
 
-        public func build() -> GiniApiLib {
+        public func build() -> GiniPayApiLib {
             // Save client information
             save(client)
             
             // Initialize logger
-            GiniApiLib.logLevel = logLevel
+            GiniPayApiLib.logLevel = logLevel
             
-            // Initialize GiniApiLib
+            // Initialize GiniPayApiLib
             switch api {
             case .accounting:
-                return GiniApiLib(documentService: AccountingDocumentService(sessionManager: SessionManager(userDomain: userApi)))
+                return GiniPayApiLib(documentService: AccountingDocumentService(sessionManager: SessionManager(userDomain: userApi)))
             case .default:
-                return GiniApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi)))
+                return GiniPayApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi)))
             case .custom:
-                return GiniApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi),
+                return GiniPayApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi),
                                                                        apiDomain: api))
             case .gym(let tokenSource):
-                return GiniApiLib(documentService: DefaultDocumentService(sessionManager:
+                return GiniPayApiLib(documentService: DefaultDocumentService(sessionManager:
                     SessionManager(alternativeTokenSource: tokenSource)))
             }
         }

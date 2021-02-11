@@ -1,10 +1,10 @@
 # Release Process
 
-This document describes the release process for a new version of the Gini Vision Library for iOS.
+This document describes the release process for a new version of the Gini Pay Api Library for iOS.
 
 1. Add new features only in separate `feature` branches and merge them into `develop`
 2. Create a `release` branch from `develop`
-  * Update `s.version` in `GiniVision.podspec` and dependencies version
+  * Update `s.version` in `GiniPayApiLib.podspec` and dependencies version
   * Add entry to changelog with version and date
 3. Merge `release` branch into `master` and `develop`
 4. Tag `master` branch with the same version used in 2

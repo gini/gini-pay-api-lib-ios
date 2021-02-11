@@ -1,5 +1,5 @@
 //
-//  GiniApiLib.swift
+//  GiniPayApiLib.swift
 //  GiniPayApiLib
 //
 //  Created by Enrique del Pozo Gómez on 1/21/18.
@@ -7,7 +7,7 @@
 
 import TrustKit
 
-extension GiniApiLib.Builder {
+extension GiniPayApiLib.Builder {
     public init(client: Client,
                 api: APIDomain = .default,
                 pinningConfig: [String: Any],
