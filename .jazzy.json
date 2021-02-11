@@ -1,17 +1,17 @@
 {
    "xcodebuild_arguments":[
       "-workspace",
-      "Example/Gini.xcworkspace",
+      "Example/GiniPayApiLib.xcworkspace",
       "-scheme",
       "Example"
    ],
    "author":"Gini GmbH",
    "author_url":"https://gini.net",
-   "module":"Gini",
+   "module":"GiniPayApiLib",
    "readme":"Documentation/sections/README.md",
    "theme": "Documentation/jazzy-theme/",
    "output":"Documentation/api",
-   "github_url":"https://github.com/gini/gini-ios",
+   "github_url":"https://github.com/gini/gini-pay-api-lib-ios",
    "hide_documentation_coverage":"true",
 
    "documentation":"Documentation/source/*.md",
@@ -23,7 +23,6 @@
          "children":[
            "Installation",
            "Getting started",
-           "Changelog",
            "License"
          ]
       },
@@ -33,7 +32,7 @@
              "AccountingDocumentService",
              "CancellationToken",
              "DefaultDocumentService",
-             "GiniSDK"
+             "GiniApiLib"
          ]
       },
       {
