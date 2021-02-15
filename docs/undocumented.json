@@ -176,6 +176,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniApiLib.swift",
+      "line": 73,
+      "symbol": "GiniApiLib.Builder.build()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
       "line": 10,
       "symbol": "GiniError",
@@ -257,13 +264,6 @@
       "line": 12,
       "symbol": "GiniError.unknown",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniPayApiLib.swift",
-      "line": 73,
-      "symbol": "GiniPayApiLib.Builder.build()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -717,7 +717,7 @@
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Pinning/GiniPayApiLib+Pinning.swift",
       "line": 11,
-      "symbol": "GiniPayApiLib.Builder.init(client:api:pinningConfig:logLevel:)",
+      "symbol": "GiniApiLib.Builder.init(client:api:pinningConfig:logLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
