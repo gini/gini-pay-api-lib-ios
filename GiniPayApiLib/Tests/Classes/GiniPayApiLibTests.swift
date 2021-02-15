@@ -10,10 +10,10 @@ import XCTest
 
 // swiftlint:disable force_cast
 
-final class GiniPayApiLibTests: XCTestCase {
+final class GiniApiLibTests: XCTestCase {
     
     func testBuildWithCustomApiDomain() {
-        let giniPayApiLib = GiniPayApiLib.Builder(client: Client(id: "", secret: "", domain: ""),
+        let giniPayApiLib = GiniApiLib.Builder(client: Client(id: "", secret: "", domain: ""),
                                       api: .custom(domain: "custom-api.domain.com"),
                                       logLevel: .none)
             .build()
@@ -23,7 +23,7 @@ final class GiniPayApiLibTests: XCTestCase {
     }
     
     func testBuildWithCustomUserDomain() {
-        let giniPayApiLib = GiniPayApiLib.Builder(client: Client(id: "", secret: "", domain: ""),
+        let giniPayApiLib = GiniApiLib.Builder(client: Client(id: "", secret: "", domain: ""),
                                       userApi: .custom(domain: "custom-user.domain.com"),
                                       logLevel: .none)
             .build()
@@ -34,7 +34,7 @@ final class GiniPayApiLibTests: XCTestCase {
     }
     
     func testBuildWithCustomApiAndUserDomain() {
-        let giniPayApiLib = GiniPayApiLib.Builder(client: Client(id: "", secret: "", domain: ""),
+        let giniPayApiLib = GiniApiLib.Builder(client: Client(id: "", secret: "", domain: ""),
                                       api: .custom(domain: "custom-api.domain.com"),
                                       userApi: .custom(domain: "custom-user.domain.com"),
                                       logLevel: .none)

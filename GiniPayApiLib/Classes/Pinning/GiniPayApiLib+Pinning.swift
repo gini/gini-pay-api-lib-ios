@@ -7,7 +7,7 @@
 
 import TrustKit
 
-extension GiniPayApiLib.Builder {
+extension GiniApiLib.Builder {
     public init(client: Client,
                 api: APIDomain = .default,
                 pinningConfig: [String: Any],

@@ -31,7 +31,7 @@ public enum LogLevel {
 
 func Log(_ message: String,
          event: LogEvent) {
-    guard case .debug = GiniPayApiLib.logLevel else { return }
+    guard case .debug = GiniApiLib.logLevel else { return }
     
     let prefix = event.value
     

@@ -1,5 +1,5 @@
 //
-//  GiniPayApiLib.swift
+//  GiniApiLib.swift
 //  GiniPayApiLib
 //
 //  Created by Enrique del Pozo Gómez on 4/3/19.
@@ -11,7 +11,7 @@ import TrustKit
 #endif
 
 /// The Gini Pay Api Library
-public final class GiniPayApiLib {
+public final class GiniApiLib {
     
     private let docService: DocumentService!
     static var logLevel: LogLevel = .none
@@ -44,7 +44,7 @@ public final class GiniPayApiLib {
 
 // MARK: - Builder
 
-extension GiniPayApiLib {
+extension GiniApiLib {
     /// Builds a Gini Pay Api Library
     public struct Builder {
         var client: Client
@@ -70,24 +70,24 @@ extension GiniPayApiLib {
             self.logLevel = logLevel
         }
 
-        public func build() -> GiniPayApiLib {
+        public func build() -> GiniApiLib {
             // Save client information
             save(client)
             
             // Initialize logger
-            GiniPayApiLib.logLevel = logLevel
+            GiniApiLib.logLevel = logLevel
             
             // Initialize GiniPayApiLib
             switch api {
             case .accounting:
-                return GiniPayApiLib(documentService: AccountingDocumentService(sessionManager: SessionManager(userDomain: userApi)))
+                return GiniApiLib(documentService: AccountingDocumentService(sessionManager: SessionManager(userDomain: userApi)))
             case .default:
-                return GiniPayApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi)))
+                return GiniApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi)))
             case .custom:
-                return GiniPayApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi),
+                return GiniApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi),
                                                                        apiDomain: api))
             case .gym(let tokenSource):
-                return GiniPayApiLib(documentService: DefaultDocumentService(sessionManager:
+                return GiniApiLib(documentService: DefaultDocumentService(sessionManager:
                     SessionManager(alternativeTokenSource: tokenSource)))
             }
         }
