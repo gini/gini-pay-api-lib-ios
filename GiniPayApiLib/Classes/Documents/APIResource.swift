@@ -14,8 +14,8 @@ public enum APIDomain {
     case accounting
     /// The GYM API, which points to https://gym.gini.net/
     case gym(tokenSource: AlternativeTokenSource)
-    /// A custom domain
-    case custom(domain: String)
+    /// A custom domain with optional custom token source
+    case custom(domain: String, tokenSource: AlternativeTokenSource?)
     
     var domainString: String {
         
@@ -23,7 +23,7 @@ public enum APIDomain {
         case .default: return "pay-api.gini.net"
         case .accounting: return "accounting-api.gini.net"
         case .gym: return "gym.gini.net"
-        case .custom(let domain): return domain
+        case .custom(let domain, _): return domain
         }
     }
 }
@@ -67,6 +67,8 @@ struct APIResource<T: Decodable>: Resource {
             return [URLQueryItem(name: "filename", itemValue: fileName),
                     URLQueryItem(name: "doctype", itemValue: docType?.rawValue)
             ]
+        case .paymentRequests(let limit, let offset):
+            return [URLQueryItem(name: "offset", itemValue: offset),URLQueryItem(name: "limit", itemValue: limit)]
         default: return nil
         }
     }
@@ -101,6 +103,20 @@ struct APIResource<T: Decodable>: Resource {
             return "/documents/partial"
         case .processedDocument(let id):
             return "/documents/\(id)/processed"
+        case .paymentProviders:
+            return "/paymentProviders"
+        case .paymentProvider(let id):
+            return "/paymentProviders/\(id)"
+        case .createPaymentRequest:
+            return "/paymentRequests"
+        case .paymentRequest(let id):
+            return "/paymentRequests/\(id)"
+        case .paymentRequests(_, _):
+            return "/paymentRequests"
+        case .resolvePaymentRequest(let id):
+            return "/paymentRequests/\(id)/payment"
+        case .payment(let id):
+            return "/paymentRequests/\(id)/payment"
         }
     }
     
@@ -116,6 +132,10 @@ struct APIResource<T: Decodable>: Resource {
             ]
         case .page:
             return [:]
+        case .paymentProviders, .paymentProvider(_), .paymentRequests(_, _) :
+        return ["Accept": ContentType.content(version: apiVersion,
+                                              subtype: nil,
+                                              mimeSubtype: "json").value]
         default:
             return ["Accept": ContentType.content(version: apiVersion,
                                                   subtype: nil,
@@ -143,7 +163,7 @@ struct APIResource<T: Decodable>: Resource {
         guard ResponseType.self != String.self else {
             let string: String?
             switch method {
-            case .createDocument:
+            case .createDocument, .createPaymentRequest, .resolvePaymentRequest:
                 string = response.allHeaderFields["Location"] as? String
             default:
                 string = String(data: data, encoding: .utf8)
@@ -163,5 +183,4 @@ struct APIResource<T: Decodable>: Resource {
         
         return try JSONDecoder().decode(ResponseType.self, from: data)
     }
-    
 }

@@ -26,5 +26,11 @@ enum APIMethod: ResourceMethod {
     case pages(forDocumentId: String)
     case page(forDocumentId: String, number: Int, size: Document.Page.Size?)
     case processedDocument(withId: String)
-    
+    case paymentProvider(id: String)
+    case paymentProviders
+    case createPaymentRequest
+    case paymentRequest(id: String)
+    case paymentRequests(limit: Int?, offset: Int?)
+    case resolvePaymentRequest(id: String)
+    case payment(id: String)
 }
