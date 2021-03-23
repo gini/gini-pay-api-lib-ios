@@ -77,7 +77,7 @@ final class PaymentTests: XCTestCase {
         XCTAssertEqual(urlString, baseAPIURLString + "/paymentRequests/d8b46793-31b4-49d5-8f81-554e9e13f3f5/payment", "path should match")
     }
     
-    func testPayment() {
+    func testPaymentURL() {
         let resource = APIResource<Payment>(method: .payment(id: "d8b46793-31b4-49d5-8f81-554e9e13f3f5"),
                                                apiDomain: .default,
                                                httpMethod: .get)
