@@ -125,7 +125,7 @@ final class APIResourceTests: XCTestCase {
                                                apiDomain: .default,
                                                httpMethod: .post)
         let contentType = resource.defaultHeaders["Content-Type"]!
-        XCTAssertEqual(contentType, "application/vnd.gini.v2.partial+jpeg", "content type should match")
+        XCTAssertEqual(contentType, "application/vnd.gini.v1.partial+jpeg", "content type should match")
     }
     
     func testDocumentCreationContentTypeV2Composite() {
@@ -137,7 +137,7 @@ final class APIResourceTests: XCTestCase {
                                                apiDomain: .default,
                                                httpMethod: .post)
         let contentType = resource.defaultHeaders["Content-Type"]!
-        XCTAssertEqual(contentType, "application/vnd.gini.v2.composite+jpeg", "content type should match")
+        XCTAssertEqual(contentType, "application/vnd.gini.v1.composite+jpeg", "content type should match")
     }
     
     func testExtractionsForDocumentIDResource() {

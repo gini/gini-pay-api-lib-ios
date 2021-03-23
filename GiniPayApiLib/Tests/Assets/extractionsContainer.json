@@ -12,7 +12,7 @@
         "height": 9.0
       }
     },
-    "senderName": {
+    "paymentRecipient": {
       "entity": "companyname",
       "value": "| AG Charlottenburg",
       "candidates": "senderNames",
