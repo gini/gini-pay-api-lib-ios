@@ -14,8 +14,13 @@ final class SessionManagerMock: SessionManagerProtocol {
     static let v1DocumentId = "626626a0-749f-11e2-bfd6-000000000000"
     static let partialDocumentId = "726626a0-749f-11e2-bfd6-000000000000"
     static let compositeDocumentId = "826626a0-749f-11e2-bfd6-000000000000"
-    
+    static let paymentProviderId = "7e72441c-32f8-11eb-b611-c3190574373c"
+    static let paymentRequestId = "9a9b41f2-32f8-11eb-9fb5-e378350b0392"
+
     var documents: [Document] = []
+    var providers: [PaymentProvider] = []
+    var paymentRequests: [PaymentRequest] = []
+
 
     init(keyStore: KeyStore = KeychainStore(),
          urlSession: URLSession = URLSession()) {
@@ -26,6 +31,14 @@ final class SessionManagerMock: SessionManagerProtocol {
         documents = [
             load(fromFile: "document", type: "json")
         ]
+    }
+    
+    func initializeWithPaymentProviders() {
+        providers = load(fromFile: "providers", type: "json")
+    }
+    
+    func initializeWithPaymentRequests() {
+        paymentRequests = load(fromFile: "paymentRequests", type: "json")
     }
     
     func initializeWithV2MockedDocuments() {
@@ -74,6 +87,9 @@ final class SessionManagerMock: SessionManagerProtocol {
                 }
             case .createDocument(_, _, _, _):
                 completion(.success(SessionManagerMock.compositeDocumentId as! T.ResponseType))
+            case .paymentProvider(_):
+                let paymentProvider: PaymentProvider = load(fromFile: "paymentProvider", type: "json")
+                completion(.success(paymentProvider as! T.ResponseType))
             default: break
                 
             }

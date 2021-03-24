@@ -14,10 +14,13 @@ import TrustKit
 public final class GiniApiLib {
     
     private let docService: DocumentService!
+    private let payService: PaymentService?
     static var logLevel: LogLevel = .none
 
-    init<T: DocumentService>(documentService: T) {
+    init<T: DocumentService>(documentService: T, paymentService: PaymentService? )
+    {
         self.docService = documentService
+        self.payService = paymentService
     }
     
     /**
@@ -31,6 +34,14 @@ public final class GiniApiLib {
         }
         //swiftlint:disable force_cast
         return docService as! T
+    }
+    
+    /**
+     * The instance of a `PaymentService` that is used by the Gini Pay Api Library. The `PaymentService` allows the interaction with payment functionality ofthe Gini API.
+     *
+     */
+    public func paymentService() -> PaymentService {
+        return payService ?? PaymentService(sessionManager: SessionManager(userDomain: .default), apiDomain: .default)
     }
     
     /// Removes the user stored credentials. Recommended when logging a different user in your app.
@@ -69,26 +80,45 @@ extension GiniApiLib {
             self.userApi = userApi
             self.logLevel = logLevel
         }
+        
+        /**
+         * Creates a Gini Pay Api Library to be used with a transparent proxy and a custom api access token source.
+         */
+        public init(customApiDomain: String,
+                    alternativeTokenSource: AlternativeTokenSource,
+                    logLevel: LogLevel = .none) {
+            self.client = Client(id: "", secret: "", domain: "")
+            self.api = .custom(domain: customApiDomain, tokenSource: alternativeTokenSource)
+            self.logLevel = logLevel
+        }
 
         public func build() -> GiniApiLib {
             // Save client information
             save(client)
-            
+
             // Initialize logger
             GiniApiLib.logLevel = logLevel
-            
+
             // Initialize GiniPayApiLib
             switch api {
             case .accounting:
-                return GiniApiLib(documentService: AccountingDocumentService(sessionManager: SessionManager(userDomain: userApi)))
+                let sessionManager = SessionManager(userDomain: userApi)
+                return GiniApiLib(documentService: AccountingDocumentService(sessionManager: SessionManager(userDomain: userApi)), paymentService: PaymentService(sessionManager: sessionManager, apiDomain: .default))
             case .default:
-                return GiniApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi)))
-            case .custom:
-                return GiniApiLib(documentService: DefaultDocumentService(sessionManager: SessionManager(userDomain: userApi),
-                                                                       apiDomain: api))
-            case .gym(let tokenSource):
+                let sessionManager = SessionManager(userDomain: userApi)
+                return GiniApiLib(documentService: DefaultDocumentService(sessionManager: sessionManager), paymentService: PaymentService(sessionManager: sessionManager, apiDomain: .default))
+            case .custom(_, let tokenSource):
+                var sessionManager : SessionManager
+                if let tokenSource = tokenSource {
+                     sessionManager = SessionManager(alternativeTokenSource: tokenSource)
+                } else {
+                    sessionManager = SessionManager(userDomain: userApi)
+                }
+                return GiniApiLib(documentService: DefaultDocumentService(sessionManager: sessionManager,apiDomain: api), paymentService: PaymentService(sessionManager: sessionManager, apiDomain: api))
+            case let .gym(tokenSource):
+                let sessionManager = SessionManager(alternativeTokenSource: tokenSource)
                 return GiniApiLib(documentService: DefaultDocumentService(sessionManager:
-                    SessionManager(alternativeTokenSource: tokenSource)))
+                                                                            sessionManager), paymentService: PaymentService(sessionManager: sessionManager))
             }
         }
         
