@@ -10,7 +10,7 @@ import Foundation
 /**
  Struct for MinAppVersions in payment provider response
  */
-public struct MinAppVersions: Codable {
+struct MinAppVersions: Codable {
     var ios: String
     var android: String?
 }

@@ -9,12 +9,12 @@ import Foundation
 /**
  Struct for payment request body
  */
-public struct PaymentRequestBody: Codable {
+struct PaymentRequestBody: Codable {
     var sourceDocumentLocation: String?
     var paymentProvider,recipient, iban, bic: String
     var amount, purpose: String
     
-    public func encode(to encoder: Encoder) throws {
+    func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(sourceDocumentLocation, forKey: .sourceDocumentLocation)
         try container.encode(paymentProvider, forKey: .paymentProvider)
@@ -29,11 +29,11 @@ public struct PaymentRequestBody: Codable {
 /**
  Struct for resolving payment request body
  */
-public struct ResolvingPaymentRequestBody: Codable {
+struct ResolvingPaymentRequestBody: Codable {
     var recipient, iban, bic: String
     var amount, purpose: String
     
-    public func encode(to encoder: Encoder) throws {
+    func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(recipient, forKey: .recipient)
         try container.encode(iban, forKey: .iban)
