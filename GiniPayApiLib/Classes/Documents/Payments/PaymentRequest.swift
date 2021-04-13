@@ -10,7 +10,8 @@ import Foundation
  Struct for payment request response
  */
 public struct PaymentRequest: Codable {
-    var paymentProvider, requesterURI, iban, bic: String
+    var paymentProvider, requesterURI, iban: String
+    var bic: String?
     var amount, purpose, recipient, createdAt: String
     var status: String
     var links: Links

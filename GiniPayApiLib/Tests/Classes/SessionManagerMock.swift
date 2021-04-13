@@ -15,7 +15,7 @@ final class SessionManagerMock: SessionManagerProtocol {
     static let partialDocumentId = "726626a0-749f-11e2-bfd6-000000000000"
     static let compositeDocumentId = "826626a0-749f-11e2-bfd6-000000000000"
     static let paymentProviderId = "7e72441c-32f8-11eb-b611-c3190574373c"
-    static let paymentRequestId = "9a9b41f2-32f8-11eb-9fb5-e378350b0392"
+    static let paymentRequestId = "f4ec8dee-5f6a-4799-b4a8-42bbfaa491cf"
 
     var documents: [Document] = []
     var providers: [PaymentProvider] = []
@@ -87,6 +87,8 @@ final class SessionManagerMock: SessionManagerProtocol {
                 }
             case .createDocument(_, _, _, _):
                 completion(.success(SessionManagerMock.compositeDocumentId as! T.ResponseType))
+            case .createPaymentRequest:
+                completion(.success(SessionManagerMock.paymentRequestId as! T.ResponseType))
             case .paymentProvider(_):
                 let paymentProvider: PaymentProvider = load(fromFile: "paymentProvider", type: "json")
                 completion(.success(paymentProvider as! T.ResponseType))
