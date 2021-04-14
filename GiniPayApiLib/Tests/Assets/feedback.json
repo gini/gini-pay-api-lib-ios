@@ -33,10 +33,10 @@
         "bic":{
             "value":"BYLADEM1001"
         },
-        "senderName":{
+        "paymentRecipient":{
             "value":"Michael Schönheißer"
         },
-        "paymentReference":{
+        "paymentPurpose":{
             "value":"ReNr Resumee-123"
         }
     }

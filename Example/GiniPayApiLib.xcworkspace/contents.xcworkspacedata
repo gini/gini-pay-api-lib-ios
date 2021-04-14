@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/home/Documents/ios projects/gini-pay-api-lib-ios/Example/GiniPayApiLib.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:GiniPayApiLib.xcodeproj">
    </FileRef>
 </Workspace>

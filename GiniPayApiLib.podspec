@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.author           = { 'Gini GmbH' => 'hello@gini.net' }
   spec.social_media_url   = "https://twitter.com/Gini"
 
-  spec.source       = { :git => "https://github.com/gini/gini-pay-api-lib-ios", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/gini/gini-pay-api-lib-ios.git", :tag => "#{spec.version}" }
   spec.swift_version    = '5.0'
   spec.ios.deployment_target = '10.0'
   spec.default_subspec = 'DocumentsAPI'
