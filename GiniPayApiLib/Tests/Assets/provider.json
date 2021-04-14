@@ -1,9 +1,10 @@
 {
-   "id": "7e72441c-32f8-11eb-b611-c3190574373c",
-   "name": "ING-DiBa",
-   "linkTemplate": "ingdiba://example/payments/",
-   "minAppVersion": {
-     "ios": "4.3.2",
-     "android": "3.5.1"
-   }
- }
+    "id": "b09ef70a-490f-11eb-952e-9bc6f4646c57",
+    "name": "ING-DiBa",
+    "appSchemeIOS": "ginipay_ingdiba",
+    "packageNameAndroid": "ing",
+    "minAppVersion": {
+        "ios": "??.?",
+        "android": "??.?"
+    }
+}

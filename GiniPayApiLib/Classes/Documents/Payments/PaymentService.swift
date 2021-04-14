@@ -46,11 +46,11 @@ public final class PaymentService: PaymentServiceProtocol {
      * - Parameter completion:              A completion callback, returning the payment request on success
      */
     
-    public func createPaymentRequest(sourceDocumentLocation: String? = nil,
+    public func createPaymentRequest(sourceDocumentLocation: String?,
                                      paymentProvider: String,
                                      recipient: String,
                                      iban: String,
-                                     bic: String,
+                                     bic: String?,
                                      amount: String,
                                      purpose: String,
                                      completion: @escaping CompletionResult<String>) {
@@ -99,7 +99,7 @@ public final class PaymentService: PaymentServiceProtocol {
     public func resolvePaymentRequest(id: String,
                                       recipient: String,
                                       iban: String,
-                                      bic: String,
+                                      bic: String? = nil,
                                       amount: String,
                                       purpose: String,
                                       completion: @escaping CompletionResult<String>) {
@@ -166,7 +166,7 @@ public protocol PaymentServiceProtocol: class {
                               paymentProvider: String,
                               recipient: String,
                               iban: String,
-                              bic: String,
+                              bic: String?,
                               amount: String,
                               purpose: String,
                               completion: @escaping CompletionResult<String>)
@@ -207,7 +207,7 @@ public protocol PaymentServiceProtocol: class {
     func resolvePaymentRequest(id: String,
                                recipient: String,
                                iban: String,
-                               bic: String,
+                               bic: String?,
                                amount: String,
                                purpose: String,
                                completion: @escaping CompletionResult<String>)
@@ -255,7 +255,8 @@ extension PaymentService {
     func createPaymentRequest(paymentRequestBody: PaymentRequestBody,
                               resourceHandler: ResourceDataHandler<APIResource<String>>,
                               completion: @escaping CompletionResult<String>) {
-        guard let jsonData = try? JSONEncoder().encode(paymentRequestBody)
+        let encoder = JSONEncoder()
+        guard let jsonData = try? encoder.encode(paymentRequestBody)
         else {
             assertionFailure("The PaymentRequestBody cannot be encoded")
             return
