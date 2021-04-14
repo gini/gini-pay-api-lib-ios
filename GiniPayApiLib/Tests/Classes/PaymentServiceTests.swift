@@ -113,7 +113,7 @@ class PaymentServiceTests: XCTestCase {
         paymentService.payment(id: "118edf41-102a-4b40-8753-df2f0634cb86"){ result in
             switch result {
             case .success(let payment):
-                let requestID = String(payment.links?.linksSelf?.split(separator: "/").dropLast().last ?? "")
+                let requestID = String(payment.links?.paymentRequest?.split(separator: "/").last ?? "")
                 XCTAssertEqual(requestID,
                                SessionManagerMock.paymentID,
                                "payment request ids should match")

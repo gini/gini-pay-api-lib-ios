@@ -17,7 +17,7 @@ public struct Payment {
 
     enum CodingKeys: String, CodingKey {
         case paidAt, recipient, iban, bic, amount, purpose
-        case links
+        case links = "_links"
     }
     
 }
