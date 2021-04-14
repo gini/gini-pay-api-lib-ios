@@ -17,7 +17,9 @@ struct PaymentRequestBody: Codable {
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(sourceDocumentLocation, forKey: .sourceDocumentLocation)
+        if let sourceDocumentLocationString = sourceDocumentLocation {
+            try container.encode(sourceDocumentLocationString, forKey: .sourceDocumentLocation)
+        }
         try container.encode(paymentProvider, forKey: .paymentProvider)
         try container.encode(recipient, forKey: .recipient)
         try container.encode(iban, forKey: .iban)

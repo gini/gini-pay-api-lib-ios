@@ -14,7 +14,7 @@ public struct PaymentRequest: Codable {
     var bic: String?
     var amount, purpose, recipient, createdAt: String
     var status: String
-    var links: Links
+    var links: Links?
 
     enum CodingKeys: String, CodingKey {
         case paymentProvider
@@ -28,7 +28,8 @@ public struct PaymentRequest: Codable {
  Struct for links in payment request response
  */
 public struct Links: Codable {
-    var linksSelf, paymentProvider, payment: String
+    var linksSelf, paymentProvider: String
+    var payment: String?
 
     enum CodingKeys: String, CodingKey {
         case linksSelf = "self"

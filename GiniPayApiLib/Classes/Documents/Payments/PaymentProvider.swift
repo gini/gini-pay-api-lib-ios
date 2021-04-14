@@ -11,7 +11,7 @@ import Foundation
  Struct for MinAppVersions in payment provider response
  */
 struct MinAppVersions: Codable {
-    var ios: String
+    var ios: String?
     var android: String?
 }
 /**
@@ -21,7 +21,7 @@ public struct PaymentProvider: Codable {
     var id: String
     var name: String
     var appSchemeIOS: String
-    var minAppVersion: MinAppVersions
+    var minAppVersion: MinAppVersions?
 }
 
 public typealias PaymentProviders = [PaymentProvider]

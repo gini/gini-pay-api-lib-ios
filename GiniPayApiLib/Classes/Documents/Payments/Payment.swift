@@ -26,7 +26,7 @@ public struct Payment {
  Struct for links in payment response
  */
 public struct PaymentLinks: Codable {
-    var paymentRequest, sourceDocumentLocation, linksSelf: String
+    var paymentRequest, sourceDocumentLocation, linksSelf: String?
 
     enum CodingKeys: String, CodingKey {
         case paymentRequest, sourceDocumentLocation
