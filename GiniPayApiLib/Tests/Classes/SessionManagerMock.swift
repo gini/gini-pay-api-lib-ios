@@ -14,11 +14,13 @@ final class SessionManagerMock: SessionManagerProtocol {
     static let v1DocumentId = "626626a0-749f-11e2-bfd6-000000000000"
     static let partialDocumentId = "726626a0-749f-11e2-bfd6-000000000000"
     static let compositeDocumentId = "826626a0-749f-11e2-bfd6-000000000000"
-    static let paymentProviderId = "7e72441c-32f8-11eb-b611-c3190574373c"
-    static let paymentRequestId = "f4ec8dee-5f6a-4799-b4a8-42bbfaa491cf"
-
+    static let paymentProviderId = "b09ef70a-490f-11eb-952e-9bc6f4646c57"
+    static let paymentRequestId = "118edf41-102a-4b40-8753-df2f0634cb86"
+    static let paymentRequestURL = "https://pay-api.gini.net/paymentRequests/118edf41-102a-4b40-8753-df2f0634cb86/payment"
+    static let paymentID = "b4bd3e80-7bd1-11e4-95ab-000000000000"
     var documents: [Document] = []
     var providers: [PaymentProvider] = []
+    var provider: PaymentProvider =  loadProvider()
     var paymentRequests: [PaymentRequest] = []
 
 
@@ -34,12 +36,12 @@ final class SessionManagerMock: SessionManagerProtocol {
     }
     
     func initializeWithPaymentProviders() {
-        providers = load(fromFile: "providers", type: "json")
+        providers = loadProviders()
     }
     
-    func initializeWithPaymentRequests() {
-        paymentRequests = load(fromFile: "paymentRequests", type: "json")
-    }
+//    func initializeWithPaymentRequests() {
+//        paymentRequests = loadPaymentRequests()
+//    }
     
     func initializeWithV2MockedDocuments() {
         documents = [
@@ -90,8 +92,19 @@ final class SessionManagerMock: SessionManagerProtocol {
             case .createPaymentRequest:
                 completion(.success(SessionManagerMock.paymentRequestId as! T.ResponseType))
             case .paymentProvider(_):
-                let paymentProvider: PaymentProvider = load(fromFile: "paymentProvider", type: "json")
+                let paymentProvider: PaymentProvider = loadProvider()
                 completion(.success(paymentProvider as! T.ResponseType))
+            case .paymentProviders:
+                let paymentProviders: PaymentProviders = loadProviders()
+                completion(.success(paymentProviders as! T.ResponseType))
+            case .paymentRequest(_):
+                let paymentRequest: PaymentRequest = loadPaymentRequest()
+                completion(.success(paymentRequest as! T.ResponseType))
+            case .resolvePaymentRequest(_):
+                completion(.success(SessionManagerMock.paymentRequestURL as! T.ResponseType))
+            case .payment(_):
+                let payment: Payment = loadPayment()
+                completion(.success(payment as! T.ResponseType))
             default: break
                 
             }
