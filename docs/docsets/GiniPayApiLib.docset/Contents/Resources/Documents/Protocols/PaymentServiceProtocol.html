@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AccountingDocumentService Class Reference</title>
+    <title>PaymentServiceProtocol Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/AccountingDocumentService" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Protocol/PaymentServiceProtocol" class="dashAnchor"></a>
 
-    <a title="AccountingDocumentService Class Reference"></a>
+    <a title="PaymentServiceProtocol Protocol Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -45,7 +45,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">GiniPayApiLib Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AccountingDocumentService Class Reference
+      PaymentServiceProtocol Protocol Reference
     </p>
 
     <div class="content-wrapper">
@@ -261,14 +261,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>AccountingDocumentService</h1>
+            <h1>PaymentServiceProtocol</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">AccountingDocumentService</span> <span class="p">:</span> <span class="kt">AccountingDocumentServiceProtocol</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PaymentServiceProtocol</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                 </div>
               </div>
-            <p>The accounting document service. Interacts with the <code><a href="../Enums/APIDomain.html#/s:13GiniPayApiLib9APIDomainO10accountingyA2CmF">APIDomain.accounting</a></code> api.</p>
+            <p>Undocumented</p>
 
           </div>
         </section>
@@ -280,9 +280,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC9apiDomainAA9APIDomainOvp"></a>
-                    <a name="//apple_ref/swift/Property/apiDomain" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC9apiDomainAA9APIDomainOvp">apiDomain</a>
+                    <a name="/s:13GiniPayApiLib22PaymentServiceProtocolP16paymentProviders10completionyys6ResultOySayAA0E8ProviderVGAA0A5ErrorOGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/paymentProviders(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib22PaymentServiceProtocolP16paymentProviders10completionyys6ResultOySayAA0E8ProviderVGAA0A5ErrorOGc_tF">paymentProviders(completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -290,45 +290,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The accounting API domain</p>
+                        <p>Returns  a list of payment providers</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">apiDomain</span><span class="p">:</span> <span class="kt"><a href="../Enums/APIDomain.html">APIDomain</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC06createF04with8fileName7docType8metadata10completiony10Foundation4DataV_SSSgAA0F0V03DocM0OSgAO8MetadataVSgys6ResultOyAoA0A5ErrorOGctF"></a>
-                    <a name="//apple_ref/swift/Method/createDocument(with:fileName:docType:metadata:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC06createF04with8fileName7docType8metadata10completiony10Foundation4DataV_SSSgAA0F0V03DocM0OSgAO8MetadataVSgys6ResultOyAoA0A5ErrorOGctF">createDocument(with:fileName:docType:metadata:completion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a document from a given image <code>Data</code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDocument</span><span class="p">(</span><span class="n">with</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
-                           <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
-                           <span class="nv">docType</span><span class="p">:</span> <span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="o">.</span><span class="kt">DocType</span><span class="p">?,</span>
-                           <span class="nv">metadata</span><span class="p">:</span> <span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="o">.</span><span class="kt">Metadata</span><span class="p">?,</span>
-                           <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">paymentProviders</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Other%20Typealiases.html#/s:13GiniPayApiLib16PaymentProvidersa">PaymentProviders</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -339,60 +308,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>data</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The image&rsquo;s data</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>fileName</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The document&rsquo;s filename</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>docType</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The document&rsquo;s docType</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>metadata</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The document&rsquo;s metadata</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
                                 <em>completion</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>A completion callback, returning the created document on success</p>
+                                  <p>A completion callback, returning the payment list on success</p>
                                 </div>
                               </td>
                             </tr>
@@ -405,9 +326,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC6delete_10completionyAA0F0V_ys6ResultOySSAA0A5ErrorOGctF"></a>
-                    <a name="//apple_ref/swift/Method/delete(_:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC6delete_10completionyAA0F0V_ys6ResultOySSAA0A5ErrorOGctF">delete(_:completion:)</a>
+                    <a name="/s:13GiniPayApiLib22PaymentServiceProtocolP15paymentProvider2id10completionySS_ys6ResultOyAA0eI0VAA0A5ErrorOGctF"></a>
+                    <a name="//apple_ref/swift/Method/paymentProvider(id:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib22PaymentServiceProtocolP15paymentProvider2id10completionySS_ys6ResultOyAA0eI0VAA0A5ErrorOGctF">paymentProvider(id:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -415,14 +336,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes a document</p>
+                        <p>Returns  a  payment providers</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">_</span> <span class="nv">document</span><span class="p">:</span> <span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">paymentProvider</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Other%20Structs.html#/s:13GiniPayApiLib15PaymentProviderV">PaymentProvider</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -433,12 +354,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>document</em>
+                                <em>id</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Document to be deleted</p>
+                                  <p>The id of the payment provider</p>
                                 </div>
                               </td>
                             </tr>
@@ -450,7 +371,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A completion callback</p>
+                                  <p>A completion callback, returning the payment provider on success</p>
                                 </div>
                               </td>
                             </tr>
@@ -463,9 +384,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC9documents5limit6offset10completionySiSg_AHys6ResultOySayAA0F0VGAA0A5ErrorOGctF"></a>
-                    <a name="//apple_ref/swift/Method/documents(limit:offset:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC9documents5limit6offset10completionySiSg_AHys6ResultOySayAA0F0VGAA0A5ErrorOGctF">documents(limit:offset:completion:)</a>
+                    <a name="/s:13GiniPayApiLib22PaymentServiceProtocolP06createE7Request22sourceDocumentLocation15paymentProvider9recipient4iban3bic6amount7purpose10completionySSSg_S3SAMS2Sys6ResultOySSAA0A5ErrorOGctF"></a>
+                    <a name="//apple_ref/swift/Method/createPaymentRequest(sourceDocumentLocation:paymentProvider:recipient:iban:bic:amount:purpose:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib22PaymentServiceProtocolP06createE7Request22sourceDocumentLocation15paymentProvider9recipient4iban3bic6amount7purpose10completionySSSg_S3SAMS2Sys6ResultOySSAA0A5ErrorOGctF">createPaymentRequest(sourceDocumentLocation:paymentProvider:recipient:iban:bic:amount:purpose:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -473,14 +394,202 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Fetches the user documents, with the possibility to retrieve them paginated</p>
+                        <p>Creates a payment request</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">documents</span><span class="p">(</span><span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="p">]</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">createPaymentRequest</span><span class="p">(</span><span class="nv">sourceDocumentLocation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">paymentProvider</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">recipient</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">iban</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">bic</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">purpose</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sourceDocumentLocation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URI of the source document whenever the payment details were                                                                                                  extracted by the Gini system beforehand (optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>paymentProvider</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The id of the target payment provider - see payment providers</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>recipient</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The recipient of the payment</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>iban</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The iban (international bank account number) of the payment recipient</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bic</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bic (bank identifier code) for the payment</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount of the paymentt</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>purpose</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The purpose of the payment, eg. the invoice or the customer identifier</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A completion callback, returning the payment request on success</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13GiniPayApiLib22PaymentServiceProtocolP14paymentRequest2id10completionySS_ys6ResultOyAA0eI0VAA0A5ErrorOGctF"></a>
+                    <a name="//apple_ref/swift/Method/paymentRequest(id:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib22PaymentServiceProtocolP14paymentRequest2id10completionySS_ys6ResultOyAA0eI0VAA0A5ErrorOGctF">paymentRequest(id:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns  a payment request</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">paymentRequest</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Other%20Structs.html#/s:13GiniPayApiLib14PaymentRequestV">PaymentRequest</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The id of the payment request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A completion callback, returning the payment request on success</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13GiniPayApiLib22PaymentServiceProtocolP15paymentRequests5limit6offset10completionySiSg_AHys6ResultOySayAA0E7RequestVGAA0A5ErrorOGctF"></a>
+                    <a name="//apple_ref/swift/Method/paymentRequests(limit:offset:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib22PaymentServiceProtocolP15paymentRequests5limit6offset10completionySiSg_AHys6ResultOySayAA0E7RequestVGAA0A5ErrorOGctF">paymentRequests(limit:offset:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of payment requests</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">paymentRequests</span><span class="p">(</span><span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Other%20Typealiases.html#/s:13GiniPayApiLib15PaymentRequestsa">PaymentRequests</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -496,7 +605,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Limit of documents to retrieve</p>
+                                  <p>The maximum number of payment requests to return (default 20), (optional)</p>
                                 </div>
                               </td>
                             </tr>
@@ -508,7 +617,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Document&rsquo;s offset</p>
+                                  <p>A starting offset (default 0), (optional)</p>
                                 </div>
                               </td>
                             </tr>
@@ -520,7 +629,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A completion callback, returning the document list on success</p>
+                                  <p>A completion callback, returning the request list on success</p>
                                 </div>
                               </td>
                             </tr>
@@ -533,9 +642,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC05fetchF04with10completionySS_ys6ResultOyAA0F0VAA0A5ErrorOGctF"></a>
-                    <a name="//apple_ref/swift/Method/fetchDocument(with:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC05fetchF04with10completionySS_ys6ResultOyAA0F0VAA0A5ErrorOGctF">fetchDocument(with:completion:)</a>
+                    <a name="/s:13GiniPayApiLib22PaymentServiceProtocolP07resolveE7Request2id9recipient4iban3bic6amount7purpose10completionySS_S3SSgS2Sys6ResultOySSAA0A5ErrorOGctF"></a>
+                    <a name="//apple_ref/swift/Method/resolvePaymentRequest(id:recipient:iban:bic:amount:purpose:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib22PaymentServiceProtocolP07resolveE7Request2id9recipient4iban3bic6amount7purpose10completionySS_S3SSgS2Sys6ResultOySSAA0A5ErrorOGctF">resolvePaymentRequest(id:recipient:iban:bic:amount:purpose:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -543,14 +652,121 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Retrieves a document for a given document id</p>
+                        <p>Resolves a payment request
+  A payment is sent by a payment provider in order to resolve a payment request after it was paid.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchDocument</span><span class="p">(</span><span class="n">with</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resolvePaymentRequest</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">recipient</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">iban</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">bic</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">purpose</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>recipient</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The recipient of the payment</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>iban</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The iban (international bank account number) of the payment recipient</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bic</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bic (bank identifier code) for the payment</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount of the paymentt</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>purpose</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The purpose of the payment, eg. the invoice or the customer identifier</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A completion callback, returning the payment request id on success</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13GiniPayApiLib22PaymentServiceProtocolP7payment2id10completionySS_ys6ResultOyAA0E0VAA0A5ErrorOGctF"></a>
+                    <a name="//apple_ref/swift/Method/payment(id:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib22PaymentServiceProtocolP7payment2id10completionySS_ys6ResultOyAA0E0VAA0A5ErrorOGctF">payment(id:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns  a  payment</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">payment</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Payment.html">Payment</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -566,7 +782,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The document&rsquo;s unique identifier</p>
+                                  <p>The the payment request&rsquo;s unique identifier</p>
                                 </div>
                               </td>
                             </tr>
@@ -578,352 +794,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A completion callback, returning the requested document on success</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC11extractions3for17cancellationToken10completionyAA0F0V_AA012CancellationK0Cys6ResultOyAA010ExtractionN0CAA0A5ErrorOGctF"></a>
-                    <a name="//apple_ref/swift/Method/extractions(for:cancellationToken:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC11extractions3for17cancellationToken10completionyAA0F0V_AA012CancellationK0Cys6ResultOyAA010ExtractionN0CAA0A5ErrorOGctF">extractions(for:cancellationToken:completion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retrieves the extractions for a given document.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">extractions</span><span class="p">(</span><span class="k">for</span> <span class="nv">document</span><span class="p">:</span> <span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="p">,</span>
-                        <span class="nv">cancellationToken</span><span class="p">:</span> <span class="kt"><a href="../Classes/CancellationToken.html">CancellationToken</a></span><span class="p">,</span>
-                        <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/ExtractionResult.html">ExtractionResult</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>document</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Document to get the extractions for</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cancellationToken</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Used to stop the analysis when a user cancels it</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A completion callback, returning the extraction list on success</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC6layout3for10completionyAA0F0V_ys6ResultOyAH6LayoutVAA0A5ErrorOGctF"></a>
-                    <a name="//apple_ref/swift/Method/layout(for:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC6layout3for10completionyAA0F0V_ys6ResultOyAH6LayoutVAA0A5ErrorOGctF">layout(for:completion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retrieves the layout of a given document</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">layout</span><span class="p">(</span><span class="k">for</span> <span class="nv">document</span><span class="p">:</span> <span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="o">.</span><span class="kt">Layout</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>id</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The document&rsquo;s unique identifier</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A completion callback, returning the requested document layout on success</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC5pages2in10completionyAA0F0V_ys6ResultOySayAH4PageVGAA0A5ErrorOGctF"></a>
-                    <a name="//apple_ref/swift/Method/pages(in:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC5pages2in10completionyAA0F0V_ys6ResultOySayAH4PageVGAA0A5ErrorOGctF">pages(in:completion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retrieves the pages of a given document</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pages</span><span class="p">(</span><span class="k">in</span> <span class="nv">document</span><span class="p">:</span> <span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="o">.</span><span class="kt">Page</span><span class="p">]</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>id</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The document&rsquo;s unique identifier</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A completion callback, returning the requested document layout on success</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC11pagePreview3for0H6Number4size10completionyAA0F0V_SiAJ4PageV4SizeOys6ResultOy10Foundation4DataVAA0A5ErrorOGctF"></a>
-                    <a name="//apple_ref/swift/Method/pagePreview(for:pageNumber:size:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC11pagePreview3for0H6Number4size10completionyAA0F0V_SiAJ4PageV4SizeOys6ResultOy10Foundation4DataVAA0A5ErrorOGctF">pagePreview(for:pageNumber:size:completion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retrieves the page preview of a document for a given page and size</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pagePreview</span><span class="p">(</span><span class="k">for</span> <span class="nv">document</span><span class="p">:</span> <span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="p">,</span>
-                        <span class="nv">pageNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                        <span class="nv">size</span><span class="p">:</span> <span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="o">.</span><span class="kt">Page</span><span class="o">.</span><span class="kt">Size</span><span class="p">,</span>
-                        <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>document</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Document to get the preview for</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pageNumber</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The document&rsquo;s page number</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>size</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The document&rsquo;s page size</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A completion callback, returning the requested page preview on success</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13GiniPayApiLib25AccountingDocumentServiceC14submitFeedback3for4with10completionyAA0F0V_SayAA10ExtractionCGys6ResultOyytAA0A5ErrorOGctF"></a>
-                    <a name="//apple_ref/swift/Method/submitFeedback(for:with:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib25AccountingDocumentServiceC14submitFeedback3for4with10completionyAA0F0V_SayAA10ExtractionCGys6ResultOyytAA0A5ErrorOGctF">submitFeedback(for:with:completion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Submits the analysis feedback for a given document.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">submitFeedback</span><span class="p">(</span><span class="k">for</span> <span class="nv">document</span><span class="p">:</span> <span class="kt"><a href="../Structs/Document.html">Document</a></span><span class="p">,</span>
-                           <span class="n">with</span> <span class="nv">extractions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Extraction.html">Extraction</a></span><span class="p">],</span>
-                           <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>document</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The document for which feedback should be sent</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>extractions</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The document&rsquo;s updated extractions</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A completion callback</p>
+                                  <p>A completion callback, returning the payment on success</p>
                                 </div>
                               </td>
                             </tr>
