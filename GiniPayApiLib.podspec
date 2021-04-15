@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/gini/gini-pay-api-lib-ios.git", :tag => "#{spec.version}" }
   spec.swift_version    = '5.0'
-  spec.ios.deployment_target = '10.0'
+  spec.ios.deployment_target = '10.2'
   spec.default_subspec = 'DocumentsAPI'
 
   spec.subspec 'DocumentsAPI' do |documents|
