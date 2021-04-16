@@ -681,6 +681,27 @@
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentProvider.swift",
+      "line": 21,
+      "symbol": "PaymentProvider.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentProvider.swift",
+      "line": 22,
+      "symbol": "PaymentProvider.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentProvider.swift",
+      "line": 23,
+      "symbol": "PaymentProvider.appSchemeIOS",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentProvider.swift",
       "line": 27,
       "symbol": "PaymentProviders",
       "symbol_kind": "source.lang.swift.decl.typealias",
