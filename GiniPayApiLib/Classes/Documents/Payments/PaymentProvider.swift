@@ -18,9 +18,9 @@ struct MinAppVersions: Codable {
  Struct for payment provider response
  */
 public struct PaymentProvider: Codable {
-    var id: String
-    var name: String
-    var appSchemeIOS: String
+    public var id: String
+    public var name: String
+    public var appSchemeIOS: String
     var minAppVersion: MinAppVersions?
 }
 
