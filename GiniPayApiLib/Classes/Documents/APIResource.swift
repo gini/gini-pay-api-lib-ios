@@ -99,6 +99,8 @@ struct APIResource<T: Decodable>: Resource {
             } else {
                 return "/documents/\(id)/pages/\(number)"
             }
+        case .pagePreview(let id, let number):
+            return "/documents/\(id)/pages/\(number)/large"
         case .partial:
             return "/documents/partial"
         case .processedDocument(let id):
@@ -130,7 +132,7 @@ struct APIResource<T: Decodable>: Resource {
                                                         subtype: documentType?.name,
                                                         mimeSubtype: mimeSubType).value
             ]
-        case .page:
+        case .page, .pagePreview(_, _):
             return [:]
         case .paymentProviders, .paymentProvider(_), .paymentRequests(_, _) :
         return ["Accept": ContentType.content(version: apiVersion,
