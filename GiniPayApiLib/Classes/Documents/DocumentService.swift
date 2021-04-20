@@ -276,6 +276,34 @@ extension DocumentService {
         }
     }
     
+    func preview(resourceHandler: @escaping ResourceDataHandler<APIResource<Data>>,
+                     with documentId: String,
+                     pageNumber: Int,
+                     completion: @escaping CompletionResult<Data>) {
+                         let resource = APIResource<Data>(method: .pagePreview(forDocumentId: documentId,
+                                                                        number: pageNumber),
+                                                          apiDomain: self.apiDomain,
+                                                          httpMethod: .get)
+                         resourceHandler(resource) { result in
+                             switch result {
+                             case let .success(data):
+                                 completion(.success(data))
+                             case let .failure(error):
+                                 if case .notFound = error {
+                                     print("Document \(documentId) page not found")
+                                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                         self.preview(resourceHandler: resourceHandler,
+                                                          with: documentId,
+                                                          pageNumber: pageNumber,
+                                                          completion: completion)
+                                     }
+                                 } else {
+                                     completion(.failure(error))
+                                 }
+                             }
+                         }
+                     }
+    
     func submitFeedback(resourceHandler: ResourceDataHandler<APIResource<String>>,
                         for document: Document,
                         with extractions: [Extraction],
