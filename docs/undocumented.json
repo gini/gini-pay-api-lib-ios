@@ -528,13 +528,20 @@
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
       "line": 279,
+      "symbol": "DocumentService.preview(resourceHandler:with:pageNumber:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
+      "line": 307,
       "symbol": "DocumentService.submitFeedback(resourceHandler:for:with:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 304,
+      "line": 332,
       "symbol": "DocumentService.submitFeedback(resourceHandler:for:with:and:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
