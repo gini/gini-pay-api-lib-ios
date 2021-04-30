@@ -39,6 +39,10 @@ final class SessionManagerMock: SessionManagerProtocol {
         providers = loadProviders()
     }
     
+    func initializeWithPaymentRequests() {
+        paymentRequests = loadPaymentRequests()
+    }
+    
     func initializeWithV2MockedDocuments() {
         documents = [
             load(fromFile: "partialDocument", type: "json"),
