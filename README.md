@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./Documentation/jazzy-theme/assets/img/repo-logo.png" width="250" height="150">
+<img src="./Documentation/jazzy-theme/assets/img/repo-logo.png" width="250">
 </p>
 
 # Gini Pay Api Library for iOS
