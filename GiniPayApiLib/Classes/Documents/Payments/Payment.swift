@@ -10,9 +10,9 @@ import Foundation
  Struct for payment response
  */
 public struct Payment {
-    var paidAt, recipient, iban: String
-    var bic: String?
-    var amount, purpose: String
+    public var paidAt, recipient, iban: String
+    public var bic: String?
+    public var amount, purpose: String
     var links: PaymentLinks?
 
     enum CodingKeys: String, CodingKey {

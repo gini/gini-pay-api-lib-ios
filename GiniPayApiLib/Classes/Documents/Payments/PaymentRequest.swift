@@ -10,10 +10,10 @@ import Foundation
  Struct for payment request response
  */
 public struct PaymentRequest: Codable {
-    var paymentProvider, requesterURI, iban: String
-    var bic: String?
-    var amount, purpose, recipient, createdAt: String
-    var status: String
+    public var paymentProvider, requesterURI, iban: String
+    public var bic: String?
+    public var amount, purpose, recipient, createdAt: String
+    public var status: String
     var links: Links?
 
     enum CodingKeys: String, CodingKey {
