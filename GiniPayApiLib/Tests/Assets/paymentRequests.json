@@ -1,7 +1,7 @@
 [
 {
   "paymentProvider": "9a9b41f2-32f8-11eb-9fb5-e378350b0392",
-  "requesterUri": "ginipay_test://paymentRequester",
+  "requesterUri": "ginipay-test://paymentRequester",
   "iban": "DE02300209000106531065",
   "bic": "CMCIDEDDXXX",
   "amount": "335.50:EUR",
@@ -17,7 +17,7 @@
 },
 {
   "paymentProvider": "9a9b41f2-32f8-11eb-9fb5-e378350b0392",
-  "requesterUri": "ginipay_test://paymentRequester",
+  "requesterUri": "ginipay-test://paymentRequester",
   "iban": "DE02300209000106531065",
   "bic": "CMCIDEDDXXX",
   "amount": "335.50:EUR",

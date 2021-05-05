@@ -16,7 +16,7 @@ final class SessionManagerMock: SessionManagerProtocol {
     static let compositeDocumentId = "826626a0-749f-11e2-bfd6-000000000000"
     static let paymentProviderId = "b09ef70a-490f-11eb-952e-9bc6f4646c57"
     static let paymentRequestId = "118edf41-102a-4b40-8753-df2f0634cb86"
-    static let paymentRequesterUri = "ginipay_test://paymentRequester"
+    static let paymentRequesterUri = "ginipay-test://paymentRequester"
 
     static let paymentRequestURL = "https://pay-api.gini.net/paymentRequests/118edf41-102a-4b40-8753-df2f0634cb86/payment"
     static let paymentID = "b4bd3e80-7bd1-11e4-95ab-000000000000"
