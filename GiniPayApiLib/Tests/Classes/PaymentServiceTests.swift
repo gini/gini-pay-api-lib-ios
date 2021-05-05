@@ -95,9 +95,9 @@ class PaymentServiceTests: XCTestCase {
 
         paymentService.resolvePaymentRequest(id: "118edf41-102a-4b40-8753-df2f0634cb86", recipient: "Uno Flüchtlingshilfe", iban: "DE78370501980020008850", amount: "1.00:EUR", purpose: "ReNr 12345") { result in
             switch result {
-            case .success(let paymentRequestID):
-                    XCTAssertEqual(paymentRequestID,
-                                   SessionManagerMock.paymentRequestId,
+            case .success(let paymentRequest):
+                XCTAssertEqual(paymentRequest.requesterUri,
+                                   SessionManagerMock.paymentRequesterUri,
                                    "payment request urls should match")
                     expect.fulfill()
                 

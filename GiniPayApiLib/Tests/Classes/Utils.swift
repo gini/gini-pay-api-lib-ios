@@ -54,6 +54,13 @@ func loadPaymentRequest() -> PaymentRequest {
         return try! JSONDecoder().decode(PaymentRequest.self, from: jsonData!)
 }
 
+func loadResolvedPaymentRequest() -> ResolvedPaymentRequest {
+    let fileURLPath: String? = Bundle(for: GiniApiLibTests.self)
+        .path(forResource: "resolvedPaymentRequest", ofType: "json")
+    let jsonData = try? Data.init(contentsOf: URL(fileURLWithPath: fileURLPath!))
+        return try! JSONDecoder().decode(ResolvedPaymentRequest.self, from: jsonData!)
+}
+
 func loadPayment() -> Payment {
     let fileURLPath: String? = Bundle(for: GiniApiLibTests.self)
         .path(forResource: "payment", ofType: "json")

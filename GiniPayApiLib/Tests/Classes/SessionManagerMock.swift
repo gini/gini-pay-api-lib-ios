@@ -16,6 +16,8 @@ final class SessionManagerMock: SessionManagerProtocol {
     static let compositeDocumentId = "826626a0-749f-11e2-bfd6-000000000000"
     static let paymentProviderId = "b09ef70a-490f-11eb-952e-9bc6f4646c57"
     static let paymentRequestId = "118edf41-102a-4b40-8753-df2f0634cb86"
+    static let paymentRequesterUri = "ginipay-test://paymentRequester"
+
     static let paymentRequestURL = "https://pay-api.gini.net/paymentRequests/118edf41-102a-4b40-8753-df2f0634cb86/payment"
     static let paymentID = "b4bd3e80-7bd1-11e4-95ab-000000000000"
     var documents: [Document] = []
@@ -101,7 +103,8 @@ final class SessionManagerMock: SessionManagerProtocol {
                 let paymentRequest: PaymentRequest = loadPaymentRequest()
                 completion(.success(paymentRequest as! T.ResponseType))
             case .resolvePaymentRequest(_):
-                completion(.success(SessionManagerMock.paymentRequestURL as! T.ResponseType))
+                let paymentRequest: ResolvedPaymentRequest = loadResolvedPaymentRequest()
+                completion(.success(paymentRequest as! T.ResponseType))
             case .payment(_):
                 let payment: Payment = loadPayment()
                 completion(.success(payment as! T.ResponseType))
