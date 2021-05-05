@@ -93,7 +93,7 @@ public final class PaymentService: PaymentServiceProtocol {
      * - Parameter bic:                     The bic (bank identifier code) for the payment
      * - Parameter amount:                  The amount of the paymentt
      * - Parameter purpose:                 The purpose of the payment, eg. the invoice or the customer identifier
-     * - Parameter completion:              A completion callback, returning the payment request id on success
+     * - Parameter completion:              A completion callback, returning the resolved payment request structure on success
      */
     
     public func resolvePaymentRequest(id: String,
@@ -102,7 +102,7 @@ public final class PaymentService: PaymentServiceProtocol {
                                       bic: String? = nil,
                                       amount: String,
                                       purpose: String,
-                                      completion: @escaping CompletionResult<String>) {
+                                      completion: @escaping CompletionResult<ResolvedPaymentRequest>) {
         let requestBody = ResolvingPaymentRequestBody(recipient: recipient, iban: iban, bic: bic, amount: amount, purpose: purpose)
         self.resolvePaymentRequest(id: id, resolvingPaymentRequestBody: requestBody, resourceHandler: sessionManager.data, completion: completion)
     }
@@ -201,7 +201,7 @@ public protocol PaymentServiceProtocol: class {
      * - Parameter bic:                     The bic (bank identifier code) for the payment
      * - Parameter amount:                  The amount of the paymentt
      * - Parameter purpose:                 The purpose of the payment, eg. the invoice or the customer identifier
-     * - Parameter completion:              A completion callback, returning the payment request id on success
+     * - Parameter completion:              A completion callback, returning the resolved payment request structure on success
      */
     
     func resolvePaymentRequest(id: String,
@@ -210,7 +210,7 @@ public protocol PaymentServiceProtocol: class {
                                bic: String?,
                                amount: String,
                                purpose: String,
-                               completion: @escaping CompletionResult<String>)
+                               completion: @escaping CompletionResult<ResolvedPaymentRequest>)
     
     /**
      *  Returns  a  payment
@@ -306,20 +306,19 @@ extension PaymentService {
     }
 
     func resolvePaymentRequest(id: String,
-                               resolvingPaymentRequestBody: ResolvingPaymentRequestBody, resourceHandler: ResourceDataHandler<APIResource<String>>,
-                               completion: @escaping CompletionResult<String>) {
+                               resolvingPaymentRequestBody: ResolvingPaymentRequestBody, resourceHandler: ResourceDataHandler<APIResource<ResolvedPaymentRequest>>,
+                               completion: @escaping CompletionResult<ResolvedPaymentRequest>) {
         guard let json = try? JSONEncoder().encode(resolvingPaymentRequestBody)
         else {
             assertionFailure("The ResolvingPaymentRequestBody cannot be encoded")
             return
         }
-        let resource = APIResource<String>(method: .resolvePaymentRequest(id: id), apiDomain: .default, httpMethod: .post, body: json)
+        let resource = APIResource<ResolvedPaymentRequest>(method: .resolvePaymentRequest(id: id), apiDomain: .default, httpMethod: .post, body: json)
 
         resourceHandler(resource, { result in
             switch result {
-            case let .success(paymentRequestUrl):
-                guard let id = paymentRequestUrl.split(separator: "/").dropLast().last else { completion(.failure(.parseError)); return }
-                completion(.success(String(id)))
+            case let .success(resolvedPaymentRequest):
+                completion(.success(resolvedPaymentRequest))
             case let .failure(error):
                 completion(.failure(error))
             }

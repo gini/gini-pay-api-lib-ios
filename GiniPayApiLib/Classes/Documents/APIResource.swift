@@ -165,7 +165,7 @@ struct APIResource<T: Decodable>: Resource {
         guard ResponseType.self != String.self else {
             let string: String?
             switch method {
-            case .createDocument, .createPaymentRequest, .resolvePaymentRequest:
+            case .createDocument, .createPaymentRequest:
                 string = response.allHeaderFields["Location"] as? String
             default:
                 string = String(data: data, encoding: .utf8)
