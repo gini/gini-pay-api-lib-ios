@@ -759,69 +759,69 @@
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
       "line": 13,
-      "symbol": "PaymentRequest.iban",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
-      "line": 13,
       "symbol": "PaymentRequest.paymentProvider",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
-      "line": 13,
+      "line": 14,
       "symbol": "PaymentRequest.requesterURI",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
-      "line": 14,
-      "symbol": "PaymentRequest.bic",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
       "line": 15,
-      "symbol": "PaymentRequest.amount",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
-      "line": 15,
-      "symbol": "PaymentRequest.createdAt",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
-      "line": 15,
-      "symbol": "PaymentRequest.purpose",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
-      "line": 15,
-      "symbol": "PaymentRequest.recipient",
+      "symbol": "PaymentRequest.iban",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
       "line": 16,
+      "symbol": "PaymentRequest.bic",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
+      "line": 17,
+      "symbol": "PaymentRequest.amount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
+      "line": 17,
+      "symbol": "PaymentRequest.createdAt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
+      "line": 17,
+      "symbol": "PaymentRequest.purpose",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
+      "line": 17,
+      "symbol": "PaymentRequest.recipient",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
+      "line": 18,
       "symbol": "PaymentRequest.status",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentRequest.swift",
-      "line": 40,
+      "line": 42,
       "symbol": "PaymentRequests",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
@@ -898,9 +898,65 @@
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentService.swift",
-      "line": 329,
+      "line": 328,
       "symbol": "PaymentService.payment(id:resourceHandler:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/ResolvedPaymentRequest.swift",
+      "line": 12,
+      "symbol": "ResolvedPaymentRequest.requesterUri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/ResolvedPaymentRequest.swift",
+      "line": 13,
+      "symbol": "ResolvedPaymentRequest.iban",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/ResolvedPaymentRequest.swift",
+      "line": 14,
+      "symbol": "ResolvedPaymentRequest.bic",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/ResolvedPaymentRequest.swift",
+      "line": 15,
+      "symbol": "ResolvedPaymentRequest.amount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/ResolvedPaymentRequest.swift",
+      "line": 15,
+      "symbol": "ResolvedPaymentRequest.createdAt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/ResolvedPaymentRequest.swift",
+      "line": 15,
+      "symbol": "ResolvedPaymentRequest.purpose",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/ResolvedPaymentRequest.swift",
+      "line": 15,
+      "symbol": "ResolvedPaymentRequest.recipient",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/ResolvedPaymentRequest.swift",
+      "line": 16,
+      "symbol": "ResolvedPaymentRequest.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {

@@ -242,6 +242,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/PaymentRequest.html">PaymentRequest</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ResolvedPaymentRequest.html">ResolvedPaymentRequest</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -653,9 +656,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib14PaymentServiceC07resolveE7Request2id9recipient4iban3bic6amount7purpose10completionySS_S3SSgS2Sys6ResultOySSAA0A5ErrorOGctF"></a>
+                    <a name="/s:13GiniPayApiLib14PaymentServiceC07resolveE7Request2id9recipient4iban3bic6amount7purpose10completionySS_S3SSgS2Sys6ResultOyAA08ResolvedeH0VAA0A5ErrorOGctF"></a>
                     <a name="//apple_ref/swift/Method/resolvePaymentRequest(id:recipient:iban:bic:amount:purpose:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib14PaymentServiceC07resolveE7Request2id9recipient4iban3bic6amount7purpose10completionySS_S3SSgS2Sys6ResultOySSAA0A5ErrorOGctF">resolvePaymentRequest(id:recipient:iban:bic:amount:purpose:completion:)</a>
+                    <a class="token" href="#/s:13GiniPayApiLib14PaymentServiceC07resolveE7Request2id9recipient4iban3bic6amount7purpose10completionySS_S3SSgS2Sys6ResultOyAA08ResolvedeH0VAA0A5ErrorOGctF">resolvePaymentRequest(id:recipient:iban:bic:amount:purpose:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -677,7 +680,7 @@
                                   <span class="nv">bic</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                                   <span class="nv">amount</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                                   <span class="nv">purpose</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                                  <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                                  <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ResolvedPaymentRequest.html">ResolvedPaymentRequest</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -753,7 +756,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A completion callback, returning the payment request id on success</p>
+                                  <p>A completion callback, returning the resolved payment request structure on success</p>
                                 </div>
                               </td>
                             </tr>
@@ -994,9 +997,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib14PaymentServiceC07resolveE7Request2id09resolvingeH4Body15resourceHandler10completionySS_AA09ResolvingehK0VyAA11APIResourceVySSG_ys6ResultOySSAA0A5ErrorOGctXEyARctF"></a>
+                    <a name="/s:13GiniPayApiLib14PaymentServiceC07resolveE7Request2id09resolvingeH4Body15resourceHandler10completionySS_AA09ResolvingehK0VyAA11APIResourceVyAA08ResolvedeH0VG_ys6ResultOyAnA0A5ErrorOGctXEyATctF"></a>
                     <a name="//apple_ref/swift/Method/resolvePaymentRequest(id:resolvingPaymentRequestBody:resourceHandler:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib14PaymentServiceC07resolveE7Request2id09resolvingeH4Body15resourceHandler10completionySS_AA09ResolvingehK0VyAA11APIResourceVySSG_ys6ResultOySSAA0A5ErrorOGctXEyARctF">resolvePaymentRequest(id:resolvingPaymentRequestBody:resourceHandler:completion:)</a>
+                    <a class="token" href="#/s:13GiniPayApiLib14PaymentServiceC07resolveE7Request2id09resolvingeH4Body15resourceHandler10completionySS_AA09ResolvingehK0VyAA11APIResourceVyAA08ResolvedeH0VG_ys6ResultOyAnA0A5ErrorOGctXEyATctF">resolvePaymentRequest(id:resolvingPaymentRequestBody:resourceHandler:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1012,8 +1015,8 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resolvePaymentRequest</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                           <span class="nv">resolvingPaymentRequestBody</span><span class="p">:</span> <span class="kt">ResolvingPaymentRequestBody</span><span class="p">,</span> <span class="nv">resourceHandler</span><span class="p">:</span> <span class="kt">ResourceDataHandler</span><span class="o">&lt;</span><span class="kt">APIResource</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;&gt;</span><span class="p">,</span>
-                           <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                           <span class="nv">resolvingPaymentRequestBody</span><span class="p">:</span> <span class="kt">ResolvingPaymentRequestBody</span><span class="p">,</span> <span class="nv">resourceHandler</span><span class="p">:</span> <span class="kt">ResourceDataHandler</span><span class="o">&lt;</span><span class="kt">APIResource</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ResolvedPaymentRequest.html">ResolvedPaymentRequest</a></span><span class="o">&gt;&gt;</span><span class="p">,</span>
+                           <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13GiniPayApiLib16CompletionResulta">CompletionResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ResolvedPaymentRequest.html">ResolvedPaymentRequest</a></span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1057,7 +1060,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://gini.net" target="_blank" rel="external">Gini GmbH</a>. All rights reserved. (Last updated: 2021-04-30)</p>
+      <p>&copy; 2021 <a class="link" href="https://gini.net" target="_blank" rel="external">Gini GmbH</a>. All rights reserved. (Last updated: 2021-05-06)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
