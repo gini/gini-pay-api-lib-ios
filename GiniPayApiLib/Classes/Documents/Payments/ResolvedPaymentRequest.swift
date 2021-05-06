@@ -1,26 +1,23 @@
 //
-//  PaymentRequest.swift
+//  ResolvedPaymentRequest.swift
 //  GiniPayApiLib
 //
-//  Created by Nadya Karaban on 19.03.21.
+//  Created by Nadya Karaban on 05.05.21.
 //
-
 import Foundation
 /**
  Struct for payment request response
  */
-public struct PaymentRequest: Codable {
-    public var paymentProvider: String
-    public var requesterURI: String?
+public struct ResolvedPaymentRequest: Codable {
+    public var requesterUri: String
     public var iban: String
     public var bic: String?
     public var amount, purpose, recipient, createdAt: String
     public var status: String
-    var links: Links?
+    var links: ResolvedPaymentRequestLinks?
 
     enum CodingKeys: String, CodingKey {
-        case paymentProvider
-        case requesterURI = "requesterUri"
+        case requesterUri
         case iban, bic, amount, purpose, recipient, createdAt, status
         case links = "_links"
     }
@@ -29,14 +26,12 @@ public struct PaymentRequest: Codable {
 /**
  Struct for links in payment request response
  */
-public struct Links: Codable {
-    var linksSelf, paymentProvider: String
+struct ResolvedPaymentRequestLinks: Codable {
+    var linksSelf, paymentProvider, sourceDocumentLocation: String?
     var payment: String?
 
     enum CodingKeys: String, CodingKey {
         case linksSelf = "self"
-        case paymentProvider, payment
+        case paymentProvider, payment,sourceDocumentLocation
     }
 }
-
-public typealias PaymentRequests = [PaymentRequest]
