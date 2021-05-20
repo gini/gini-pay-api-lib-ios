@@ -129,7 +129,7 @@ public final class PaymentService: PaymentServiceProtocol {
     }
 }
 
-public protocol PaymentServiceProtocol: class {
+public protocol PaymentServiceProtocol: AnyObject {
 
     /**
      *  Returns  a list of payment providers
