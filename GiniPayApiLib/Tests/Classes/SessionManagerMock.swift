@@ -24,6 +24,7 @@ final class SessionManagerMock: SessionManagerProtocol {
     var providers: [PaymentProvider] = []
     var provider: PaymentProvider =  loadProvider()
     var paymentRequests: [PaymentRequest] = []
+    var extractionsContainer = ExtractionsContainer(extractions: [], compoundExtractions: [:], candidates: [], returnReasons: [])
 
 
     init(keyStore: KeyStore = KeychainStore(),
@@ -35,6 +36,9 @@ final class SessionManagerMock: SessionManagerProtocol {
         documents = [
             load(fromFile: "document", type: "json")
         ]
+    }
+    func initializeWithExtractionsContainer(){
+        extractionsContainer =  load(fromFile: "extractionsContainer", type: "json")
     }
     
     func initializeWithPaymentProviders() {
@@ -108,8 +112,9 @@ final class SessionManagerMock: SessionManagerProtocol {
             case .payment(_):
                 let payment: Payment = loadPayment()
                 completion(.success(payment as! T.ResponseType))
+            case .feedback(_):
+                completion(.success("Feedback was sent" as! T.ResponseType))
             default: break
-                
             }
         }
     }
