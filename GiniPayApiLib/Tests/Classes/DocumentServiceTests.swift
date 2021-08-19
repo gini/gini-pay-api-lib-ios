@@ -150,20 +150,53 @@ final class DocumentServicesTests: XCTestCase {
 
     func testSubmitFeedback() {
         let expect = expectation(description: "feedback will be successfully sent")
-        sessionManagerMock.initializeWithExtractionsContainer()
-        let extractionResult = loadExtractionResults(fileName: "extractionsResults", type: "json")
         let document: Document = loadDocument(fileName: "compositeDocument", type: "json")
-        if let compoundExtractions = extractionResult.compoundExtractions {
-            defaultDocumentService.submitFeedback(for: document, with: extractionResult.extractions, and: compoundExtractions) { result in
-                switch result {
-                case .success:
-                    DispatchQueue.main.async {
-                        expect.fulfill()
+        let extractionResult = loadExtractionResults(fileName: "feedbackExtractions", type: "json")
+
+        let feedbackData =
+            loadFile(withName: "feedbackToSend", ofType: "json")
+        if let json = try? JSONSerialization.jsonObject(with: feedbackData, options: .mutableContainers) {
+            let amountToPayExtraction = extractionResult.extractions.first {
+                $0.name == "amountToPay"
+            }
+            let amountToPay = amountToPayExtraction?.value ?? ""
+
+            if let compoundExtractions = extractionResult.compoundExtractions {
+                if let lineItems = compoundExtractions["lineItems"] {
+                    let filteredCompoundExtractions = ["lineItems": [lineItems.first!]]
+
+                    let pay4Keys = ["amountToPay", "iban", "reference", "paymentRecipient"]
+
+                    defaultDocumentService.submitFeedback(for: document, with: extractionResult.extractions.filter { extraction in
+                        pay4Keys.contains(extraction.name ?? "")
+                    },
+                    and: filteredCompoundExtractions) { result in
+                        switch result {
+                        case .success:
+                            DispatchQueue.main.async {
+                                if let json2 = try? JSONSerialization.jsonObject(with: self.sessionManagerMock.extractionFeedbackBody!, options: .mutableContainers) {
+                                    if let dictionary = json2 as? [String: [Extraction]] {
+                                        if let extractions = dictionary["extractions"] {
+                                            let amountToPayExtraction = extractions.first {
+                                                $0.name == "amountToPay"
+                                            }
+
+                                            XCTAssertEqual(amountToPay,
+                                                           amountToPayExtraction?.value ?? "",
+                                                           "feedback httpBodies should match")
+                                        }
+                                    } else {
+                                        print("json data malformed")
+                                    }
+                                }
+                                expect.fulfill()
+                            }
+                        case .failure:
+                            break
+                        }
+                        self.wait(for: [expect], timeout: 1)
                     }
-                case .failure:
-                    break
                 }
-                self.wait(for: [expect], timeout: 1)
             }
         }
     }
