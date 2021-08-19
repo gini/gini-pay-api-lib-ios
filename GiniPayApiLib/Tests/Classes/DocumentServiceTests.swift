@@ -152,10 +152,18 @@ final class DocumentServicesTests: XCTestCase {
         let expect = expectation(description: "feedback will be successfully sent")
         let document: Document = loadDocument(fileName: "compositeDocument", type: "json")
         let extractionResult = loadExtractionResults(fileName: "feedbackExtractions", type: "json")
-
+        var amountToPayFromLoadedFeedbackValue = ""
         let feedbackData =
             loadFile(withName: "feedbackToSend", ofType: "json")
         if let json = try? JSONSerialization.jsonObject(with: feedbackData, options: .mutableContainers) {
+            if let dictionary = json as? [String: [Extraction]] {
+                if let extractions = dictionary["extractions"] {
+                    let amountToPayFromLoadedFeedback = extractions.first {
+                        $0.name == "amountToPay"
+                    }
+                    amountToPayFromLoadedFeedbackValue = amountToPayFromLoadedFeedback?.value ?? ""
+                }
+            }
             let amountToPayExtraction = extractionResult.extractions.first {
                 $0.name == "amountToPay"
             }
@@ -174,16 +182,19 @@ final class DocumentServicesTests: XCTestCase {
                         switch result {
                         case .success:
                             DispatchQueue.main.async {
-                                if let json2 = try? JSONSerialization.jsonObject(with: self.sessionManagerMock.extractionFeedbackBody!, options: .mutableContainers) {
-                                    if let dictionary = json2 as? [String: [Extraction]] {
+                                if let jsonFromFeedbackHttpBody = try? JSONSerialization.jsonObject(with: self.sessionManagerMock.extractionFeedbackBody!, options: .mutableContainers) {
+                                    if let dictionary = jsonFromFeedbackHttpBody as? [String: [Extraction]] {
                                         if let extractions = dictionary["extractions"] {
-                                            let amountToPayExtraction = extractions.first {
+                                            let amountToPayFromHttpBodyExtraction = extractions.first {
                                                 $0.name == "amountToPay"
                                             }
 
                                             XCTAssertEqual(amountToPay,
-                                                           amountToPayExtraction?.value ?? "",
-                                                           "feedback httpBodies should match")
+                                                           amountToPayFromHttpBodyExtraction?.value ?? "",
+                                                           "amout to pay values should match")
+                                            XCTAssertEqual(amountToPay,
+                                                           amountToPayFromLoadedFeedbackValue,
+                                                           "amout to pay values should match")
                                         }
                                     } else {
                                         print("json data malformed")
