@@ -313,9 +313,9 @@ extension DocumentService {
             return
         }
         
-        let resource = APIResource<String>(method: .extractions(forDocumentId: document.id),
+        let resource = APIResource<String>(method: .feedback(forDocumentId: document.id),
                                            apiDomain: apiDomain,
-                                           httpMethod: .put,
+                                           httpMethod: .post,
                                            body: json)
         
         resourceHandler(resource, { result in
