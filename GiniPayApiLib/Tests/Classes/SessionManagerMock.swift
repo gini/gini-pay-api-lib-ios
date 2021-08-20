@@ -24,6 +24,7 @@ final class SessionManagerMock: SessionManagerProtocol {
     var providers: [PaymentProvider] = []
     var provider: PaymentProvider =  loadProvider()
     var paymentRequests: [PaymentRequest] = []
+    var extractionFeedbackBody: Data?
 
 
     init(keyStore: KeyStore = KeychainStore(),
@@ -108,8 +109,10 @@ final class SessionManagerMock: SessionManagerProtocol {
             case .payment(_):
                 let payment: Payment = loadPayment()
                 completion(.success(payment as! T.ResponseType))
+            case .feedback(_):
+                extractionFeedbackBody = resource.request.httpBody ?? nil
+                completion(.success("Feedback was sent" as! T.ResponseType))
             default: break
-                
             }
         }
     }
