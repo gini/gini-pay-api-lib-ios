@@ -13,7 +13,7 @@ The Gini Pay Api Library provides ways to interact with the Gini API and therefo
 ## Contents
 
 * [Installation](installation.html)
-* [Integration](integration.html)
+* [Getting started](getting-started.html)
 * [License](license.html)
 
 ## API

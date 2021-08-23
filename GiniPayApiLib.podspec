@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "GiniPayApiLib"
-  spec.version      = "1.0.8"
+  spec.version      = "1.0.9"
   spec.summary      = "Gini Pay Api Library for scanning documents"
   spec.description  = <<-DESC
   Gini provides an information extraction system for analyzing documents (e. g. invoices or
