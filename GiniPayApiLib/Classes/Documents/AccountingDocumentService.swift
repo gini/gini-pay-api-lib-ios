@@ -154,4 +154,16 @@ public final class AccountingDocumentService: AccountingDocumentServiceProtocol 
         submitFeedback(resourceHandler: sessionManager.data, for: document, with: extractions, completion: completion)
     }
 
+    /**
+     * Logs an error event.
+     *
+     * - Parameter errorEvent:          The error event details
+     * - Parameter completion:          A completion callback
+     */
+    public func log(errorEvent: ErrorEvent,
+                    completion: @escaping CompletionResult<Void>) {
+        log(resourceHandler: sessionManager.data,
+            errorEvent: errorEvent,
+            completion: completion)
+    }
 }

@@ -232,4 +232,17 @@ public final class DefaultDocumentService: DefaultDocumentServiceProtocol {
                     pageNumber: pageNumber,
                     completion: completion)
     }
+    
+    /**
+     * Logs an error event.
+     *
+     * - Parameter errorEvent:          The error event details
+     * - Parameter completion:          A completion callback
+     */
+    public func log(errorEvent: ErrorEvent,
+                    completion: @escaping CompletionResult<Void>) {
+        log(resourceHandler: sessionManager.data,
+            errorEvent: errorEvent,
+            completion: completion)
+    }
 }

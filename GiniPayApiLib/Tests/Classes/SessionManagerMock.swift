@@ -25,6 +25,7 @@ final class SessionManagerMock: SessionManagerProtocol {
     var provider: PaymentProvider =  loadProvider()
     var paymentRequests: [PaymentRequest] = []
     var extractionFeedbackBody: Data?
+    var logErrorEventBody: Data?
 
 
     init(keyStore: KeyStore = KeychainStore(),
@@ -112,6 +113,9 @@ final class SessionManagerMock: SessionManagerProtocol {
             case .feedback(_):
                 extractionFeedbackBody = resource.request.httpBody ?? nil
                 completion(.success("Feedback was sent" as! T.ResponseType))
+            case .logErrorEvent:
+                logErrorEventBody = resource.request.httpBody ?? nil
+                completion(.success("Logged" as! T.ResponseType))
             default: break
             }
         }

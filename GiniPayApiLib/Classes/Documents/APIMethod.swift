@@ -34,4 +34,5 @@ enum APIMethod: ResourceMethod {
     case paymentRequests(limit: Int?, offset: Int?)
     case resolvePaymentRequest(id: String)
     case payment(id: String)
+    case logErrorEvent
 }
