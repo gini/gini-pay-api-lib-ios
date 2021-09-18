@@ -2,13 +2,12 @@ pipeline {
   agent any
   environment {
     GIT = credentials('github')
+    CLIENT_CREDENTIALS = credentials('gini-mobile-test-client-id')
   }
   stages {
     stage('Prerequisites') {
       environment {
         GEONOSIS_USER_PASSWORD = credentials('GeonosisUserPassword')
-        CLIENT_ID = credentials('VisionClientID')
-        CLIENT_PASSWORD = credentials('VisionClientPassword')
       }
       steps {
         sh 'security unlock-keychain -p ${GEONOSIS_USER_PASSWORD} login.keychain'
@@ -24,7 +23,14 @@ pipeline {
     }
     stage('Unit tests') {
       steps {
-        sh 'xcodebuild test -workspace Example/GiniPayApiLib.xcworkspace -scheme "GiniPayApiLib-Unit-Tests" -destination \'platform=iOS Simulator,name=iPhone 11\''
+        sh '''
+            xcodebuild test \
+            -workspace Example/GiniPayApiLib.xcworkspace \
+            -scheme "GiniPayApiLib-Unit-Tests" \
+            -destination 'platform=iOS Simulator,name=iPhone 11' \
+            CLIENT_ID=$CLIENT_CREDENTIALS_USR \
+            CLIENT_SECRET=$CLIENT_CREDENTIALS_PSW
+        '''
       }
     }
     stage('Documentation') {
