@@ -46,7 +46,10 @@ public final class AccountingDocumentService: AccountingDocumentServiceProtocol 
             guard let self = self else { return }
             switch result {
             case .success(let documentUrl):
-                guard let id = documentUrl.split(separator: "/").last else { completion(.failure(.parseError)); return }
+                guard let id = documentUrl.split(separator: "/").last else {
+                    completion(.failure(.parseError(message: "Invalid document url: \(documentUrl)")))
+                    return
+                }
                 self.fetchDocument(with: String(id), completion: completion)
             case .failure(let error):
                 completion(.failure(error))

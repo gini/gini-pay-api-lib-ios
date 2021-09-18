@@ -47,7 +47,7 @@ extension CompoundExtractionsFeedback: Encodable {
         try extractions.forEach { extraction in
             guard let name = extraction.name,
                 let nameKey = NameKey(stringValue: name) else {
-                throw GiniError.parseError
+                throw GiniError.parseError(message: "Failed to encode extraction")
             }
             
             var extractionContainer = extractionsContainer.nestedContainer(keyedBy: ExtractionKeys.self, forKey: nameKey)
@@ -59,7 +59,7 @@ extension CompoundExtractionsFeedback: Encodable {
         
         try compoundExtractions.forEach { (name, compoundExtractions) in
             guard let nameKey = NameKey(stringValue: name) else {
-                throw GiniError.parseError
+                throw GiniError.parseError(message: "Failed to encode compound extractions")
             }
             
             var compoundExtractionsContainer = compoundExtractionsContainer.nestedUnkeyedContainer(forKey: nameKey)
@@ -70,7 +70,7 @@ extension CompoundExtractionsFeedback: Encodable {
                 try compoundExtraction.forEach { extraction in
                     guard let name = extraction.name,
                         let nameKey = NameKey(stringValue: name) else {
-                        throw GiniError.parseError
+                        throw GiniError.parseError(message: "Failed to encode compound extraction")
                     }
                     
                     var extractionContainer = compoundExtractionContainer.nestedContainer(keyedBy: ExtractionKeys.self, forKey: nameKey)

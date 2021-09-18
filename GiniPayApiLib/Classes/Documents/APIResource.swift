@@ -176,7 +176,7 @@ struct APIResource<T: Decodable>: Resource {
             if let string = string as? ResponseType {
                 return string
             } else {
-                throw GiniError.parseError
+                throw GiniError.parseError(message: "Invalid string response", response: response, data: data)
             }
         }
         
