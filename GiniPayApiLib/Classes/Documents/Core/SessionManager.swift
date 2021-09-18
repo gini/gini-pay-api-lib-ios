@@ -160,6 +160,8 @@ private extension SessionManager {
                 Log("Stored token is no longer valid", event: .warning)
                 handleError(resource: resource,
                             statusCode: 401,
+                            response: nil,
+                            data: nil,
                             taskType: taskType,
                             cancellationToken: cancellationToken,
                             completion: completion)
@@ -239,10 +241,10 @@ private extension SessionManager {
                                 Parse error: \(error)
                                 Data content: \(String(describing: String(data: jsonData, encoding: .utf8)))
                                 """, event: .error)
-                            completion(.failure(.parseError))
+                            completion(.failure(.parseError(message: "Failed to parse response", response: response, data: jsonData)))
                         }
                     } else {
-                        completion(.failure(.unknown))
+                        completion(.failure(.unknown(response: response, data: nil)))
                     }
                 case 400..<500:
                     Log("""
@@ -252,6 +254,8 @@ private extension SessionManager {
                         event: .error)
                     self.handleError(resource: resource,
                                      statusCode: response.statusCode,
+                                     response: response,
+                                     data: data,
                                      taskType: taskType,
                                      cancellationToken: cancellationToken,
                                      completion: completion)
@@ -263,7 +267,7 @@ private extension SessionManager {
                             """,
                             event: .error)
                     }
-                    completion(.failure(.unknown))
+                    completion(.failure(.unknown(response: response, data: data)))
                 }
             } else {
                 if let data = data {
@@ -278,7 +282,7 @@ private extension SessionManager {
                         """,
                         event: .error)
                 }
-                completion(.failure(.parseError))
+                completion(.failure(.parseError(message: "Response type was not HTTPURLResponse", response: nil, data: data)))
             }
         }
     }
@@ -302,12 +306,14 @@ private extension SessionManager {
     
     private func handleError<T: Resource>(resource: T,
                                           statusCode: Int,
+                                          response: HTTPURLResponse?,
+                                          data: Data?,
                                           taskType: TaskType,
                                           cancellationToken: CancellationToken?,
                                           completion: @escaping CompletionResult<T.ResponseType>) {
         switch statusCode {
         case 400:
-            completion(.failure(.badRequest))
+            completion(.failure(.badRequest(response: response, data: data)))
         case 401:
             if let authServiceType = resource.authServiceType, case .apiService = authServiceType {
                 do {
@@ -324,24 +330,23 @@ private extension SessionManager {
                                       cancellationToken: cancellationToken,
                                       completion: completion)
                         case .failure:
-                            completion(.failure(.unauthorized))
+                            completion(.failure(.unauthorized(response: response, data: data)))
                         }
                     }
                 } catch {
-                    completion(.failure(.unauthorized))
-                    
+                    completion(.failure(.unauthorized(response: response, data: data)))
                 }
             } else {
-                completion(.failure(.unauthorized))
+                completion(.failure(.unauthorized(response: response, data: data)))
             }
         case 404:
-            completion(.failure(.notFound))
+            completion(.failure(.notFound(response: response, data: data)))
         case 406:
-            completion(.failure(.notAcceptable))
+            completion(.failure(.notAcceptable(response: response, data: data)))
         case 429:
-            completion(.failure(.tooManyRequests))
+            completion(.failure(.tooManyRequests(response: response, data: data)))
         default:
-            completion(.failure(.unknown))
+            completion(.failure(.unknown(response: response, data: data)))
         }
     }
     
