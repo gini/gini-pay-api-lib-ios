@@ -61,7 +61,8 @@ pipeline {
         sh '''
             /usr/local/bin/pod repo push gini-specs GiniPayApiLib.podspec \
             --sources=https://github.com/gini/gini-podspecs.git,https://github.com/CocoaPods/Specs.git \
-            --allow-warnings
+            --allow-warnings \
+            --skip-tests
         '''
       }
     }
