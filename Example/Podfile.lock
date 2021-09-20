@@ -23,9 +23,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GiniPayApiLib: e2cc64ecf04cec47f00016c1f73fefc550dda9e0
+  GiniPayApiLib: cee117410f0170886f5474b8e9ff410efcc94f1c
   TrustKit: 073855e3adecd317417bda4ac9e9ac54a2e3b9f2
 
 PODFILE CHECKSUM: dedbb6d77a6105e4b4e51ccb120a32c7abde4ee9
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

@@ -268,7 +268,10 @@ extension PaymentService {
         resourceHandler(resource, { result in
             switch result {
             case let .success(paymentRequestUrl):
-                guard let id = paymentRequestUrl.split(separator: "/").last else { completion(.failure(.parseError)); return }
+                guard let id = paymentRequestUrl.split(separator: "/").last else {
+                    completion(.failure(.parseError(message: "Invalid payment request url: \(paymentRequestUrl)")))
+                    return
+                }
                 completion(.success(String(id)))
             case let .failure(error):
                 completion(.failure(error))

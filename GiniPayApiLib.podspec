@@ -33,6 +33,12 @@ Pod::Spec.new do |spec|
     test_spec.source_files = 'GiniPayApiLib/Tests/Classes/*.swift'
     test_spec.resources = 'GiniPayApiLib/Tests/Assets/*'
     test_spec.requires_app_host = true
+    test_spec.scheme = {
+      :environment_variables => { 
+          "CLIENT_ID" => "$(CLIENT_ID)",
+          "CLIENT_SECRET" => "$(CLIENT_SECRET)"
+      }
+    }
   end
 
 
