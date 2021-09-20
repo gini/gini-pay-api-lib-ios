@@ -220,6 +220,9 @@
                 <a class="nav-group-task-link" href="../Protocols/AlternativeTokenSource.html">AlternativeTokenSource</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/GiniErrorProtocol.html">GiniErrorProtocol</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/PaymentServiceProtocol.html">PaymentServiceProtocol</a>
               </li>
             </ul>
@@ -227,6 +230,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Other Structures.html">Other Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ErrorEvent.html">ErrorEvent</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Other%20Structs.html#/s:13GiniPayApiLib5LinksV">Links</a>
               </li>
@@ -267,7 +273,7 @@
             <h1>GiniError</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">GiniError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">GiniError</span> <span class="p">:</span> <span class="kt">Error</span><span class="p">,</span> <span class="kt"><a href="../Protocols/GiniErrorProtocol.html">GiniErrorProtocol</a></span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
 
                 </div>
               </div>
@@ -283,9 +289,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib0A5ErrorO10badRequestyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/badRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO10badRequestyA2CmF">badRequest</a>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO10badRequestyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF"></a>
+                    <a name="//apple_ref/swift/Element/badRequest(response:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO10badRequestyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF">badRequest(response:data:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -300,7 +306,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">badRequest</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">badRequest</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -364,9 +370,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib0A5ErrorO13notAcceptableyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/notAcceptable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO13notAcceptableyA2CmF">notAcceptable</a>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO13notAcceptableyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF"></a>
+                    <a name="//apple_ref/swift/Element/notAcceptable(response:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO13notAcceptableyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF">notAcceptable(response:data:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -381,7 +387,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notAcceptable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">notAcceptable</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -391,9 +397,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib0A5ErrorO8notFoundyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/notFound" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO8notFoundyA2CmF">notFound</a>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO8notFoundyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF"></a>
+                    <a name="//apple_ref/swift/Element/notFound(response:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO8notFoundyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF">notFound(response:data:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -408,7 +414,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notFound</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">notFound</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -445,9 +451,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib0A5ErrorO05parseE0yA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/parseError" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO05parseE0yA2CmF">parseError</a>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO05parseE0yACSS_So17NSHTTPURLResponseCSg10Foundation4DataVSgtcACmF"></a>
+                    <a name="//apple_ref/swift/Element/parseError(message:response:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO05parseE0yACSS_So17NSHTTPURLResponseCSg10Foundation4DataVSgtcACmF">parseError(message:response:data:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -462,7 +468,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">parseError</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">parseError</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -499,9 +505,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib0A5ErrorO15tooManyRequestsyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/tooManyRequests" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO15tooManyRequestsyA2CmF">tooManyRequests</a>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO15tooManyRequestsyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF"></a>
+                    <a name="//apple_ref/swift/Element/tooManyRequests(response:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO15tooManyRequestsyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF">tooManyRequests(response:data:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -516,7 +522,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tooManyRequests</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">tooManyRequests</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -526,9 +532,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib0A5ErrorO12unauthorizedyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/unauthorized" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO12unauthorizedyA2CmF">unauthorized</a>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO12unauthorizedyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF"></a>
+                    <a name="//apple_ref/swift/Element/unauthorized(response:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO12unauthorizedyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF">unauthorized(response:data:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -543,7 +549,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unauthorized</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">unauthorized</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -553,9 +559,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib0A5ErrorO7unknownyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/unknown" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO7unknownyA2CmF">unknown</a>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO7unknownyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF"></a>
+                    <a name="//apple_ref/swift/Element/unknown(response:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO7unknownyACSo17NSHTTPURLResponseCSg_10Foundation4DataVSgtcACmF">unknown(response:data:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -570,7 +576,88 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unknown</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">unknown</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO7messageSSvp"></a>
+                    <a name="//apple_ref/swift/Property/message" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO7messageSSvp">message</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO8responseSo17NSHTTPURLResponseCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/response" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO8responseSo17NSHTTPURLResponseCSgvp">response</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13GiniPayApiLib0A5ErrorO4data10Foundation4DataVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib0A5ErrorO4data10Foundation4DataVSgvp">data</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -585,7 +672,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://gini.net" target="_blank" rel="external">Gini GmbH</a>. All rights reserved. (Last updated: 2021-08-23)</p>
+      <p>&copy; 2021 <a class="link" href="https://gini.net" target="_blank" rel="external">Gini GmbH</a>. All rights reserved. (Last updated: 2021-09-20)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

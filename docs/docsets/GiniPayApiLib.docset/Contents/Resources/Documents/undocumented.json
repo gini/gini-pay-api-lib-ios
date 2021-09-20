@@ -185,134 +185,85 @@
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
       "line": 10,
-      "symbol": "GiniErrorProtocol",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 11,
-      "symbol": "GiniErrorProtocol.message",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 12,
-      "symbol": "GiniErrorProtocol.response",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 13,
-      "symbol": "GiniErrorProtocol.data",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 16,
       "symbol": "GiniError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 17,
-      "symbol": "GiniError.badRequest(response:data:)",
+      "line": 11,
+      "symbol": "GiniError.badRequest",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 18,
+      "line": 11,
       "symbol": "GiniError.invalidCredentials",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 19,
+      "line": 11,
       "symbol": "GiniError.keychainError",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 20,
-      "symbol": "GiniError.notAcceptable(response:data:)",
+      "line": 11,
+      "symbol": "GiniError.notAcceptable",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 21,
-      "symbol": "GiniError.notFound(response:data:)",
+      "line": 11,
+      "symbol": "GiniError.notFound",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 22,
+      "line": 12,
       "symbol": "GiniError.noResponse",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 23,
-      "symbol": "GiniError.parseError(message:response:data:)",
+      "line": 12,
+      "symbol": "GiniError.parseError",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 24,
+      "line": 12,
       "symbol": "GiniError.requestCancelled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 25,
-      "symbol": "GiniError.tooManyRequests(response:data:)",
+      "line": 12,
+      "symbol": "GiniError.tooManyRequests",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 26,
-      "symbol": "GiniError.unauthorized(response:data:)",
+      "line": 12,
+      "symbol": "GiniError.unauthorized",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 27,
-      "symbol": "GiniError.unknown(response:data:)",
+      "line": 12,
+      "symbol": "GiniError.unknown",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 29,
-      "symbol": "GiniError.message",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 56,
-      "symbol": "GiniError.response",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Core/GiniError.swift",
-      "line": 71,
-      "symbol": "GiniError.data",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -520,92 +471,78 @@
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 125,
+      "line": 117,
       "symbol": "DocumentService",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 127,
+      "line": 119,
       "symbol": "DocumentService.documents(resourceHandler:limit:offset:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 144,
+      "line": 136,
       "symbol": "DocumentService.deleteDocument(resourceHandler:with:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 161,
+      "line": 153,
       "symbol": "DocumentService.extractions(resourceHandler:documentResourceHandler:for:cancellationToken:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 189,
+      "line": 181,
       "symbol": "DocumentService.fetchDocument(resourceHandler:with:cancellationToken:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 211,
+      "line": 203,
       "symbol": "DocumentService.layout(resourceHandler:for:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 228,
+      "line": 220,
       "symbol": "DocumentService.pages(resourceHandler:in:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 245,
+      "line": 237,
       "symbol": "DocumentService.pagePreview(resourceHandler:in:pageNumber:size:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 287,
+      "line": 279,
       "symbol": "DocumentService.preview(resourceHandler:with:pageNumber:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 315,
+      "line": 307,
       "symbol": "DocumentService.submitFeedback(resourceHandler:for:with:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 340,
+      "line": 332,
       "symbol": "DocumentService.submitFeedback(resourceHandler:for:with:and:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/DocumentService.swift",
-      "line": 368,
-      "symbol": "DocumentService.log(resourceHandler:errorEvent:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/ErrorEvent.swift",
-      "line": 21,
-      "symbol": "ErrorEvent.init(deviceModel:osName:osVersion:captureSdkVersion:apiLibVersion:description:documentId:originalRequestId:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -940,28 +877,28 @@
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentService.swift",
-      "line": 282,
+      "line": 279,
       "symbol": "PaymentService.paymentRequest(id:resourceHandler:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentService.swift",
-      "line": 296,
+      "line": 293,
       "symbol": "PaymentService.paymentRequests(limit:offset:resourceHandler:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentService.swift",
-      "line": 311,
+      "line": 308,
       "symbol": "PaymentService.resolvePaymentRequest(id:resolvingPaymentRequestBody:resourceHandler:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mobilecd/.jenkins/workspace/gini_gini-pay-api-lib-ios_master/GiniPayApiLib/Classes/Documents/Payments/PaymentService.swift",
-      "line": 331,
+      "line": 328,
       "symbol": "PaymentService.payment(id:resourceHandler:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

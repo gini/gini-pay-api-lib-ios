@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>GiniApiLib Class Reference</title>
+    <title>ErrorEvent Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/GiniApiLib" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/ErrorEvent" class="dashAnchor"></a>
 
-    <a title="GiniApiLib Class Reference"></a>
+    <a title="ErrorEvent Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -45,7 +45,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">GiniPayApiLib Reference</a>
       <img class="carat" src="../img/carat.png" />
-      GiniApiLib Class Reference
+      ErrorEvent Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -270,14 +270,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>GiniApiLib</h1>
+            <h1>ErrorEvent</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">GiniApiLib</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ErrorEvent</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
 
                 </div>
               </div>
-            <p>The Gini Pay Api Library</p>
+            <p>Data model for sending error events.</p>
 
           </div>
         </section>
@@ -289,9 +289,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13GiniPayApiLib0acD0C15documentServicexyAA08DocumentF0RzlF"></a>
-                    <a name="//apple_ref/swift/Method/documentService()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0acD0C15documentServicexyAA08DocumentF0RzlF">documentService()</a>
+                    <a name="/s:13GiniPayApiLib10ErrorEventV11deviceModel6osName0I7Version010captureSdkK003apidK011description10documentId015originalRequestQ0ACSS_S6SSgALtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(deviceModel:osName:osVersion:captureSdkVersion:apiLibVersion:description:documentId:originalRequestId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13GiniPayApiLib10ErrorEventV11deviceModel6osName0I7Version010captureSdkK003apidK011description10documentId015originalRequestQ0ACSS_S6SSgALtcfc">init(deviceModel:osName:osVersion:captureSdkVersion:apiLibVersion:description:documentId:originalRequestId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -299,108 +299,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The instance of a <code><a href="../Protocols/DocumentService.html">DocumentService</a></code> that is used by the Gini Pay Api Library. The <code><a href="../Protocols/DocumentService.html">DocumentService</a></code> allows the interaction with
-the Gini API.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">documentService</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/DocumentService.html">DocumentService</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13GiniPayApiLib0acD0C14paymentServiceAA07PaymentF0CyF"></a>
-                    <a name="//apple_ref/swift/Method/paymentService()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0acD0C14paymentServiceAA07PaymentF0CyF">paymentService()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The instance of a <code><a href="../Classes/PaymentService.html">PaymentService</a></code> that is used by the Gini Pay Api Library. The <code><a href="../Classes/PaymentService.html">PaymentService</a></code> allows the interaction with payment functionality ofthe Gini API.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">paymentService</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PaymentService.html">PaymentService</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13GiniPayApiLib0acD0C23removeStoredCredentialsyyKF"></a>
-                    <a name="//apple_ref/swift/Method/removeStoredCredentials()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0acD0C23removeStoredCredentialsyyKF">removeStoredCredentials()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Removes the user stored credentials. Recommended when logging a different user in your app.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeStoredCredentials</span><span class="p">()</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Builder"></a>
-                <a name="//apple_ref/swift/Section/Builder" class="dashAnchor"></a>
-                <a href="#/Builder">
-                  <h3 class="section-name">Builder</h3>
-                </a>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13GiniPayApiLib0acD0C7BuilderV"></a>
-                    <a name="//apple_ref/swift/Struct/Builder" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13GiniPayApiLib0acD0C7BuilderV">Builder</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Builds a Gini Pay Api Library</p>
-
-                        <a href="../Classes/GiniApiLib/Builder.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Builder</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">deviceModel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">osName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">osVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">captureSdkVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">apiLibVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">documentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+            <span class="nv">originalRequestId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
