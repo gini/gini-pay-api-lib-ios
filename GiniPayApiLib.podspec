@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "GiniPayApiLib"
-  spec.version      = "1.0.9"
+  spec.version      = "1.0.10"
   spec.summary      = "Gini Pay Api Library for scanning documents"
   spec.description  = <<-DESC
   Gini provides an information extraction system for analyzing documents (e. g. invoices or
@@ -33,6 +33,12 @@ Pod::Spec.new do |spec|
     test_spec.source_files = 'GiniPayApiLib/Tests/Classes/*.swift'
     test_spec.resources = 'GiniPayApiLib/Tests/Assets/*'
     test_spec.requires_app_host = true
+    test_spec.scheme = {
+      :environment_variables => { 
+          "CLIENT_ID" => "$(CLIENT_ID)",
+          "CLIENT_SECRET" => "$(CLIENT_SECRET)"
+      }
+    }
   end
 
 

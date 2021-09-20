@@ -46,7 +46,10 @@ public final class AccountingDocumentService: AccountingDocumentServiceProtocol 
             guard let self = self else { return }
             switch result {
             case .success(let documentUrl):
-                guard let id = documentUrl.split(separator: "/").last else { completion(.failure(.parseError)); return }
+                guard let id = documentUrl.split(separator: "/").last else {
+                    completion(.failure(.parseError(message: "Invalid document url: \(documentUrl)")))
+                    return
+                }
                 self.fetchDocument(with: String(id), completion: completion)
             case .failure(let error):
                 completion(.failure(error))
@@ -154,4 +157,16 @@ public final class AccountingDocumentService: AccountingDocumentServiceProtocol 
         submitFeedback(resourceHandler: sessionManager.data, for: document, with: extractions, completion: completion)
     }
 
+    /**
+     * Logs an error event.
+     *
+     * - Parameter errorEvent:          The error event details
+     * - Parameter completion:          A completion callback
+     */
+    public func log(errorEvent: ErrorEvent,
+                    completion: @escaping CompletionResult<Void>) {
+        log(resourceHandler: sessionManager.data,
+            errorEvent: errorEvent,
+            completion: completion)
+    }
 }

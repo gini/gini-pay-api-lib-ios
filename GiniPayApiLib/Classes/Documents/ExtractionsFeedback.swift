@@ -42,7 +42,7 @@ extension ExtractionsFeedback: Encodable {
             guard let name = extraction.name,
                 let key = FeedbackKey(stringValue: name),
                 let valueKey = FeedbackKey(stringValue: "value") else {
-                throw GiniError.parseError
+                throw GiniError.parseError(message: "Failed to encode feedback")
             }
             
             var extractionContainer = feedbackContainer.nestedContainer(keyedBy: FeedbackKey.self, forKey: key)

@@ -119,6 +119,8 @@ struct APIResource<T: Decodable>: Resource {
             return "/paymentRequests/\(id)/payment"
         case .payment(let id):
             return "/paymentRequests/\(id)/payment"
+        case .logErrorEvent:
+            return "/events/error"
         }
     }
     
@@ -174,7 +176,7 @@ struct APIResource<T: Decodable>: Resource {
             if let string = string as? ResponseType {
                 return string
             } else {
-                throw GiniError.parseError
+                throw GiniError.parseError(message: "Invalid string response", response: response, data: data)
             }
         }
         
