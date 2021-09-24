@@ -73,9 +73,6 @@ documentService.createDocument(fileName: "myFirstDocument.jpg",
 
 Each page of a document needs to uploaded as a partial document. In addition documents consisting of one page also should be uploaded as a partial document.
 
-> ⚠️  **Warning**
-> - If you are using the Gini Accounting API, then partial documents are not supported. Use the `documentService.createDocument()` methods instead.
-
 > ⚠️  **Note**
 > - PDFs and UTF-8 encoded text should also be uploaded as partial documents. Even though PDFs might contain multiple pages and text is “pageless”, creating partial documents for these keeps your interaction with Gini consistent for all the supported document types.
 
@@ -91,9 +88,6 @@ To easily set the document type hint we introduced the `DocType` enum. It is saf
 ### Getting extractions
 
 After you have successfully created the partial documents, you most likely want to get the extractions for the document. Composite documents consist of previously created partial documents. You can consider creating partial documents analogous to uploading pages of a document and creating a composite document analogous to processing those pages as a single document.
-
-> ⚠️  **Warning**
-> - If you are using the Gini Accounting API, then composite documents are not supported. You need to use `documentService.fetchDocument()` and then `documentService.extractions()` without creating a composite document.
 
 Before retrieving extractions you need to create a composite document from your partial documents
 
