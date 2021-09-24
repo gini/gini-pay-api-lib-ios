@@ -127,7 +127,10 @@ documentService
 
 ### Sending feedback
 
-Depending on your use case your app probably presents the extractions to the user and gives them the opportunity to correct them. Yes, there could be errors. We do our best to prevent them - but it’s more unlikely to happen if your app sends us feedback for the extractions we have delivered. Your app should send feedback only for the extractions the user has seen and accepted. Feedback should be sent for corrected extractions and for correct extractions. The code example below shows how to correct extractions and send feedback.
+Depending on your use case your app probably presents the extractions to the user and gives them the opportunity to correct them. By sending us feedback for the extractions we are able to continuously improve the extraction quality.
+
+Your app should send feedback only for the extractions the user has seen and accepted. Feedback should be sent for corrected extractions and for correct extractions. The code example below shows how to correct extractions and send feedback.
+
 ```swift
 guard let document = document else { return }
 
@@ -151,4 +154,4 @@ documentService.submitFeedback(for: document, with: updatedExtractions) { result
 
 ### Handling errors
 
-Currently, the Gini Pay Api Library doesn’t have intelligent error-handling mechanisms. All errors that occur during executing a task are handed over transparently. You can react on those errors in the `failure` case of the task. We may add better error-handling mechanisms in the future. At the moment we recommend checking the network status when a task failed and retrying the task.
+All errors that occur during request execution are handed over transparently. You can react on those errors in the `failure` case of the completion result. We recommend checking the network status when a request failed and retrying it.
