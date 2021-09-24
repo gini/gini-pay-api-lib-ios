@@ -160,4 +160,4 @@ documentService.submitFeedback(for: document, with: updatedExtractions) { result
 
 ### Handling errors
 
-Currently, the Gini Pay Api Library doesn’t have intelligent error-handling mechanisms. All errors that occur during executing a task are handed over transparently. You can react on those errors in the `failure` case of the task. We may add better error-handling mechanisms in the future. At the moment we recommend checking the network status when a task failed and retrying the task.
+All errors that occur during request execution are handed over transparently. You can react on those errors in the `failure` case of the completion result. We recommend checking the network status when a request failed and retrying it.
